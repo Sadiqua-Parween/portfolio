@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sadiqua Parween &bull; Software Engineer & Builder</title>
-  <meta name="description" content="Personal portfolio of Sadiqua Parween. Software engineer passionate about thoughtful engineering, clean architecture, and building calming, human-centered digital experiences.">
+  <title>Sadiqua Parween &bull; Systems & Concurrency Software Engineer</title>
+  <meta name="description" content="Portfolio of Sadiqua Parween - Systems & Concurrency Software Engineer, seL4 & GNOME upstream contributor, and B.Tech CS & AI scholar at Newton School of Technology.">
 
-  <!-- Google Fonts: Warm editorial serif + clean modern sans -->
+  <!-- Google Fonts: Editorial warm serif + clean geometric sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -26,28 +26,28 @@
           colors: {
             cozy: {
               cream: '#faf7f2',
-              creamDark: '#f3ede3',
-              sand: '#ece5d8',
+              creamDark: '#f4ede2',
+              sand: '#ece4d6',
               card: '#ffffff',
-              border: '#e6ded1',
-              charcoal: '#2d2926',
-              muted: '#716b64',
-              sage: '#5e7c68',
-              sageLight: '#eaf0ec',
-              terracotta: '#c86d51',
-              terracottaLight: '#faece8',
-              warmAmber: '#d49b4b',
-              warmAmberLight: '#fbf4ea',
+              border: '#e7ded0',
+              charcoal: '#2d2824',
+              muted: '#736c64',
+              sage: '#577863',
+              sageLight: '#ebf1ed',
+              terracotta: '#c5684d',
+              terracottaLight: '#fbece7',
+              warmAmber: '#c99142',
+              warmAmberLight: '#fbf4e8',
             },
             night: {
-              bg: '#1c1a17',
-              card: '#24211d',
-              border: '#36322b',
-              text: '#ece7df',
-              muted: '#9c9489',
+              bg: '#1b1916',
+              card: '#23201c',
+              border: '#353029',
+              text: '#ede8e1',
+              muted: '#9e968b',
               sage: '#8fa996',
               sageBg: '#212a23',
-              terracotta: '#e0896f',
+              terracotta: '#df896f',
               terracottaBg: '#32231e',
             }
           }
@@ -60,85 +60,82 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    /* Smooth gentle scroll */
     html {
       background-color: #faf7f2;
-      color: #2d2926;
+      color: #2d2824;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
     html.dark {
-      background-color: #1c1a17;
-      color: #ece7df;
+      background-color: #1b1916;
+      color: #ede8e1;
     }
 
     /* Soft custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 7px;
-    }
-    ::-webkit-scrollbar-track {
-      background: transparent;
-    }
+    ::-webkit-scrollbar { width: 7px; }
+    ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb {
-      background: #d8cfc0;
+      background: #d8cfbf;
       border-radius: 9999px;
     }
     .dark ::-webkit-scrollbar-thumb {
-      background: #3e3831;
+      background: #3c362e;
     }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #beb3a2;
-    }
+    ::-webkit-scrollbar-thumb:hover { background: #beb29f; }
 
-    /* Subtle image warm shadow */
-    .portrait-shadow {
-      box-shadow: 0 18px 40px -12px rgba(110, 93, 76, 0.16);
-    }
-    .dark .portrait-shadow {
-      box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.45);
-    }
-
-    /* Soft card hover */
+    /* Soft cards hover */
     .soft-card {
-      transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s ease, border-color 0.22s ease;
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
     }
     .soft-card:hover {
       transform: translateY(-2px);
     }
+
+    .portrait-shadow {
+      box-shadow: 0 16px 36px -12px rgba(95, 78, 62, 0.16);
+    }
+    .dark .portrait-shadow {
+      box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.5);
+    }
   </style>
 </head>
 
-<body class="font-sans antialiased selection:bg-[#e8dccd] dark:selection:bg-[#3d362c] text-cozy-charcoal dark:text-night-text min-h-screen flex flex-col justify-between">
+<body class="font-sans antialiased text-cozy-charcoal dark:text-night-text min-h-screen flex flex-col justify-between selection:bg-[#e8ddcd] dark:selection:bg-[#3d362c]">
 
   <!-- ======================================================== -->
   <!-- NAVIGATION BAR                                           -->
   <!-- ======================================================== -->
-  <header class="sticky top-0 z-40 bg-[#faf7f2]/90 dark:bg-[#1c1a17]/90 backdrop-blur-md border-b border-cozy-border/70 dark:border-night-border/70 transition-colors">
-    <div class="max-w-4xl mx-auto px-5 sm:px-8 h-18 py-4 flex items-center justify-between">
+  <header class="sticky top-0 z-40 bg-[#faf7f2]/92 dark:bg-[#1b1916]/92 backdrop-blur-md border-b border-cozy-border/70 dark:border-night-border/70 transition-colors">
+    <div class="max-w-4xl mx-auto px-5 sm:px-8 py-3.5 flex items-center justify-between">
       
-      <!-- Brand & Soft Availability Pill -->
+      <!-- Brand & Available Indicator -->
       <a href="#" class="flex items-center gap-2.5 group">
         <span class="w-2.5 h-2.5 rounded-full bg-cozy-sage dark:bg-night-sage inline-block animate-pulse"></span>
-        <span class="font-serif font-semibold text-lg tracking-tight group-hover:text-cozy-terracotta dark:group-hover:text-night-terracotta transition-colors">
-          Sadiqua Parween
-        </span>
+        <div class="flex flex-col">
+          <span class="font-serif font-semibold text-lg tracking-tight group-hover:text-cozy-terracotta dark:group-hover:text-night-terracotta transition-colors leading-tight">
+            Sadiqua Parween
+          </span>
+          <span class="text-[11px] font-mono text-cozy-muted dark:text-night-muted leading-tight">Systems & Concurrency Engineer</span>
+        </div>
       </a>
 
       <!-- Navigation Links -->
-      <nav class="hidden md:flex items-center space-x-7 text-sm text-cozy-muted dark:text-night-muted font-medium">
+      <nav class="hidden md:flex items-center space-x-6 text-sm text-cozy-muted dark:text-night-muted font-medium">
         <a href="#about" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">About</a>
         <a href="#aspirations" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Aspirations</a>
+        <a href="#experience" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Experience</a>
         <a href="#projects" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Skills</a>
         <a href="#contact" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Contact</a>
       </nav>
 
-      <!-- Right Controls: Resume & Theme Toggle -->
+      <!-- Action Buttons -->
       <div class="flex items-center gap-2.5">
-        <button onclick="downloadResume()" class="text-xs font-medium px-3.5 py-1.5 rounded-full bg-cozy-sand/60 dark:bg-night-card hover:bg-cozy-sand dark:hover:bg-night-border border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text transition-all flex items-center gap-1.5" title="Download Resume Summary">
+        <button onclick="downloadResume()" class="text-xs font-medium px-3.5 py-1.5 rounded-full bg-cozy-sand/60 dark:bg-night-card hover:bg-cozy-sand dark:hover:bg-night-border border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text transition-all flex items-center gap-1.5">
           <i data-lucide="file-text" class="w-3.5 h-3.5 text-cozy-muted dark:text-night-muted"></i>
           <span>Resume</span>
         </button>
 
-        <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2 rounded-full hover:bg-cozy-sand/60 dark:hover:bg-night-card border border-transparent hover:border-cozy-border dark:hover:border-night-border text-cozy-muted dark:text-night-muted transition-colors" title="Toggle Calm Dark/Light Mode">
+        <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2 rounded-full hover:bg-cozy-sand/60 dark:hover:bg-night-card border border-transparent hover:border-cozy-border dark:hover:border-night-border text-cozy-muted dark:text-night-muted transition-colors" title="Toggle Calm Day/Night Theme">
           <i data-lucide="moon" id="moonIcon" class="w-4 h-4"></i>
           <i data-lucide="sun" id="sunIcon" class="w-4 h-4 hidden"></i>
         </button>
@@ -151,53 +148,68 @@
   <!-- ======================================================== -->
   <!-- MAIN CONTENT CONTAINER                                   -->
   <!-- ======================================================== -->
-  <main class="max-w-4xl mx-auto px-5 sm:px-8 py-12 sm:py-16 space-y-20 sm:space-y-24 flex-1">
+  <main class="max-w-4xl mx-auto px-5 sm:px-8 py-10 sm:py-14 space-y-16 sm:space-y-20 flex-1">
 
     <!-- ====================================================== -->
     <!-- 1. HERO SECTION                                         -->
     <!-- ====================================================== -->
-    <section class="grid grid-cols-1 md:grid-cols-12 gap-10 sm:gap-12 items-center">
+    <section class="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-10 items-center">
       
       <!-- Left: Introduction Text -->
-      <div class="md:col-span-7 space-y-5 order-2 md:order-1">
+      <div class="md:col-span-7 space-y-4 order-2 md:order-1">
         
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cozy-sageLight dark:bg-night-sageBg text-cozy-sage dark:text-night-sage text-xs font-medium">
           <span class="w-1.5 h-1.5 rounded-full bg-cozy-sage dark:bg-night-sage"></span>
-          <span>Open to Software Engineering Roles</span>
+          <span>seL4 &amp; GNOME Upstream Contributor</span>
         </div>
 
-        <h1 class="font-serif text-3xl sm:text-4xl lg:text-[44px] font-normal leading-[1.25] tracking-tight">
-          Hello, I'm <span class="italic font-medium text-cozy-terracotta dark:text-night-terracotta">Sadiqua</span> &mdash; building software with care, calm, and purpose.
+        <h1 class="font-serif text-3xl sm:text-4xl lg:text-[42px] font-normal leading-[1.2] tracking-tight">
+          Hi, I'm <span class="italic font-medium text-cozy-terracotta dark:text-night-terracotta">Sadiqua Parween</span>.
         </h1>
 
         <p class="text-cozy-muted dark:text-night-muted text-base sm:text-lg leading-relaxed font-normal">
-          I am a full-stack software engineer who enjoys transforming complex ideas into intuitive, quiet, and reliable digital experiences. I believe good software should feel effortless to use and maintain.
+          Systems &amp; concurrency software engineer and B.Tech student in Computer Science &amp; Artificial Intelligence at Newton School of Technology (S-VYASA University, Bengaluru). I specialize in operating systems internals, low-level concurrency, microkernels, and upstream open-source development.
         </p>
 
-        <!-- Warm action links -->
-        <div class="flex flex-wrap items-center gap-4 pt-2">
-          <a href="#projects" class="px-5 py-2.5 rounded-full bg-cozy-charcoal text-cozy-cream dark:bg-night-text dark:text-night-bg font-medium text-sm hover:opacity-90 transition-opacity">
-            View Projects &darr;
+        <!-- Social Proof Badges from verified accounts -->
+        <div class="flex flex-wrap items-center gap-3 pt-1 text-xs font-mono">
+          <a href="https://github.com/Sadiqua-Parween" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border hover:border-cozy-terracotta dark:hover:border-night-terracotta flex items-center gap-1.5 transition-colors">
+            <i data-lucide="github" class="w-3.5 h-3.5"></i>
+            <span>github.com/Sadiqua-Parween</span>
+          </a>
+          <a href="https://gitlab.gnome.org/Sadiqua" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border hover:border-cozy-sage dark:hover:border-night-sage flex items-center gap-1.5 transition-colors">
+            <i data-lucide="git-merge" class="w-3.5 h-3.5 text-cozy-sage dark:text-night-sage"></i>
+            <span>gitlab.gnome.org/Sadiqua</span>
+          </a>
+          <a href="https://www.linkedin.com/in/sadiquaparween/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border hover:border-cozy-warmAmber flex items-center gap-1.5 transition-colors">
+            <i data-lucide="linkedin" class="w-3.5 h-3.5 text-cozy-warmAmber"></i>
+            <span>in/sadiquaparween</span>
+          </a>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3.5 pt-2">
+          <a href="#experience" class="px-5 py-2.5 rounded-full bg-cozy-charcoal text-cozy-cream dark:bg-night-text dark:text-night-bg font-medium text-sm hover:opacity-90 transition-opacity">
+            View Upstream Work &darr;
           </a>
           <a href="#contact" class="px-5 py-2.5 rounded-full bg-cozy-card dark:bg-night-card hover:bg-cozy-creamDark dark:hover:bg-night-border border border-cozy-border dark:border-night-border text-sm font-medium transition-colors">
-            Get in touch
+            Get in Touch
           </a>
         </div>
 
       </div>
 
-      <!-- Right: User Portrait Photo -->
+      <!-- Right: User Portrait (Letterbox gap removed, cropped properly) -->
       <div class="md:col-span-5 flex justify-center order-1 md:order-2">
         <div class="relative group">
-          <!-- Gentle organic halo behind image -->
-          <div class="absolute inset-0 bg-gradient-to-tr from-cozy-sand via-cozy-sageLight to-cozy-terracottaLight dark:from-night-border dark:via-night-sageBg dark:to-night-terracottaBg rounded-3xl transform rotate-2 group-hover:rotate-0 transition-transform duration-300"></div>
+          <!-- Gentle organic background frame -->
+          <div class="absolute inset-0 bg-gradient-to-tr from-cozy-sand via-cozy-sageLight to-cozy-terracottaLight dark:from-night-border dark:via-night-sageBg dark:to-night-terracottaBg rounded-2xl transform rotate-1 group-hover:rotate-0 transition-transform duration-300"></div>
 
           <!-- Portrait Image Container -->
-          <div class="relative w-56 sm:w-64 aspect-[3/4] rounded-2xl overflow-hidden border-2 border-cozy-cream dark:border-night-card portrait-shadow bg-cozy-sand/30">
+          <div class="relative w-52 sm:w-60 aspect-[472/670] rounded-xl overflow-hidden border-2 border-cozy-cream dark:border-night-card portrait-shadow bg-cozy-sand/30">
             <img 
               src="profile.jpg" 
-              alt="Sadiqua Parween portrait" 
-              class="w-full h-full object-cover object-top hover:scale-[1.02] transition-transform duration-500"
+              alt="Sadiqua Parween - Systems & Concurrency Software Engineer" 
+              class="w-full h-full object-cover object-center"
               loading="eager"
             />
           </div>
@@ -210,38 +222,42 @@
     <!-- ====================================================== -->
     <!-- 2. A LITTLE ABOUT ME                                   -->
     <!-- ====================================================== -->
-    <section id="about" class="space-y-6 pt-4 border-t border-cozy-border/60 dark:border-night-border/60">
+    <section id="about" class="space-y-5 pt-4 border-t border-cozy-border/60 dark:border-night-border/60">
       
       <div class="space-y-1">
         <span class="text-xs uppercase tracking-widest text-cozy-muted dark:text-night-muted font-medium">Background</span>
         <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">A Little About Me</h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 text-cozy-muted dark:text-night-muted leading-relaxed text-base">
-        <div class="md:col-span-7 space-y-4">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 text-cozy-muted dark:text-night-muted leading-relaxed text-sm sm:text-base">
+        <div class="md:col-span-7 space-y-3.5">
           <p>
-            My journey in software engineering started with an intrinsic curiosity for how code can solve everyday frictions. Over the years, I've cultivated a deep appreciation for the entire spectrum of engineering &mdash; from thoughtful frontend layout systems to robust, well-tested backend microservices and databases.
+            I am a systems software engineer with deep passion for low-level architecture, microkernels, memory synchronization, and concurrent software. Currently pursuing my Bachelor of Technology in Computer Science &amp; Artificial Intelligence at Newton School of Technology (S-VYASA University, Bengaluru, CGPA: 7.57/10.0, expected May 2029).
           </p>
           <p>
-            When I'm building, I focus on clean abstraction, maintainability, and accessibility. I prefer code that is easy to read over code that is clever, and architectures that grow naturally with users' needs.
+            My engineering work centers on solving complex multithreaded synchronization bugs, eliminating race conditions, and designing cross-Protection Domain (PD) synchronization primitives for verified operating systems like seL4, as well as fixing compositor UI freezes and D-Bus IPC deadlocks in the core GNOME desktop environment.
           </p>
         </div>
 
-        <div class="md:col-span-5 p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-3.5 text-sm">
-          <div class="font-serif text-base font-medium text-cozy-charcoal dark:text-night-text">Core Tools & Technologies</div>
+        <div class="md:col-span-5 p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-3 text-xs sm:text-sm">
+          <div class="font-serif text-sm font-medium text-cozy-charcoal dark:text-night-text">Academic Snapshot</div>
           
-          <div class="space-y-2">
+          <div class="space-y-2 text-xs">
             <div>
-              <span class="text-xs font-mono text-cozy-terracotta dark:text-night-terracotta font-medium">Frontend:</span>
-              <p class="text-xs text-cozy-charcoal dark:text-night-text mt-0.5">JavaScript, TypeScript, React.js, Next.js, Tailwind CSS, HTML5/CSS3</p>
+              <span class="font-mono text-cozy-muted dark:text-night-muted">Institution:</span>
+              <p class="font-medium text-cozy-charcoal dark:text-night-text mt-0.5">Newton School of Technology, S-VYASA University &bull; Bengaluru, India</p>
             </div>
             <div>
-              <span class="text-xs font-mono text-cozy-sage dark:text-night-sage font-medium">Backend & APIs:</span>
-              <p class="text-xs text-cozy-charcoal dark:text-night-text mt-0.5">Node.js, Express, Python, FastAPI, RESTful APIs, Microservices</p>
+              <span class="font-mono text-cozy-muted dark:text-night-muted">Degree:</span>
+              <p class="font-medium text-cozy-charcoal dark:text-night-text mt-0.5">B.Tech in Computer Science &amp; Artificial Intelligence (2025 &ndash; 2029)</p>
             </div>
             <div>
-              <span class="text-xs font-mono text-cozy-warmAmber dark:text-night-text font-medium">Data & Tools:</span>
-              <p class="text-xs text-cozy-charcoal dark:text-night-text mt-0.5">PostgreSQL, MongoDB, Redis, Docker, Git, Linux Shell</p>
+              <span class="font-mono text-cozy-muted dark:text-night-muted">Academic Standing:</span>
+              <p class="font-medium text-cozy-charcoal dark:text-night-text mt-0.5">CGPA: 7.57 / 10.0</p>
+            </div>
+            <div>
+              <span class="font-mono text-cozy-muted dark:text-night-muted">Core Coursework:</span>
+              <p class="text-cozy-muted dark:text-night-muted mt-0.5">Operating Systems, Distributed Systems, Data Structures &amp; Algorithms, Computer Networks, Database Systems.</p>
             </div>
           </div>
         </div>
@@ -253,45 +269,54 @@
     <!-- ====================================================== -->
     <!-- 3. WHAT I AIM TO BE                                    -->
     <!-- ====================================================== -->
-    <section id="aspirations" class="space-y-6 pt-4 border-t border-cozy-border/60 dark:border-night-border/60">
+    <section id="aspirations" class="space-y-5 pt-4 border-t border-cozy-border/60 dark:border-night-border/60">
       
       <div class="space-y-1">
-        <span class="text-xs uppercase tracking-widest text-cozy-muted dark:text-night-muted font-medium">Vision & Purpose</span>
-        <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">What I Aim to Be</h2>
+        <span class="text-xs uppercase tracking-widest text-cozy-muted dark:text-night-muted font-medium">Vision &amp; Placement</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">What I Aim to Be &amp; Work Rights</h2>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+      <!-- Placement & Research Visa Banner -->
+      <div class="p-5 rounded-2xl bg-cozy-sageLight dark:bg-night-sageBg border border-cozy-sage/30 dark:border-night-sage/30 space-y-2">
+        <div class="flex items-center gap-2 text-xs font-mono font-semibold text-cozy-sage dark:text-night-sage">
+          <i data-lucide="compass" class="w-4 h-4"></i>
+          <span>CURRENT OBJECTIVE &bull; RESEARCH PLACEMENT (AUGUST 2026 &ndash; JANUARY 2027)</span>
+        </div>
+        <p class="text-xs sm:text-sm text-cozy-charcoal dark:text-night-text leading-relaxed">
+          Seeking an accredited <strong>6-Month Full-Time Research Placement (August 2026 &ndash; January 2027)</strong> for academic credit. Eligible for the <strong>Subclass 408 (Research Stream) Visa</strong>, fully supported by Home University No Objection Certificate (NOC) and institutional credit endorsement.
+        </p>
+      </div>
+
+      <!-- 3 Engineering Aspirations -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-1">
         
-        <!-- Pillar 1 -->
-        <div class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-3 soft-card">
-          <div class="w-9 h-9 rounded-xl bg-cozy-sageLight dark:bg-night-sageBg text-cozy-sage dark:text-night-sage flex items-center justify-center">
-            <i data-lucide="compass" class="w-4 h-4"></i>
+        <div class="p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-2.5 soft-card">
+          <div class="w-8 h-8 rounded-lg bg-cozy-sageLight dark:bg-night-sageBg text-cozy-sage dark:text-night-sage flex items-center justify-center">
+            <i data-lucide="cpu" class="w-4 h-4"></i>
           </div>
-          <h3 class="font-serif font-medium text-lg text-cozy-charcoal dark:text-night-text">A Thoughtful Architect</h3>
-          <p class="text-xs sm:text-sm text-cozy-muted dark:text-night-muted leading-relaxed">
-            I aim to design resilient, enduring software architectures that handle scale gracefully while remaining simple for teams to reason about and evolve.
+          <h3 class="font-serif font-medium text-base text-cozy-charcoal dark:text-night-text">Core Systems Engineer</h3>
+          <p class="text-xs text-cozy-muted dark:text-night-muted leading-relaxed">
+            Advancing microkernels (seL4), real-time operating systems, multi-core synchronization primitives, and formally verified low-level computing architectures.
           </p>
         </div>
 
-        <!-- Pillar 2 -->
-        <div class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-3 soft-card">
-          <div class="w-9 h-9 rounded-xl bg-cozy-terracottaLight dark:bg-night-terracottaBg text-cozy-terracotta dark:text-night-terracotta flex items-center justify-center">
-            <i data-lucide="heart-handshake" class="w-4 h-4"></i>
+        <div class="p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-2.5 soft-card">
+          <div class="w-8 h-8 rounded-lg bg-cozy-terracottaLight dark:bg-night-terracottaBg text-cozy-terracotta dark:text-night-terracotta flex items-center justify-center">
+            <i data-lucide="git-pull-request" class="w-4 h-4"></i>
           </div>
-          <h3 class="font-serif font-medium text-lg text-cozy-charcoal dark:text-night-text">A Human-Centered Builder</h3>
-          <p class="text-xs sm:text-sm text-cozy-muted dark:text-night-muted leading-relaxed">
-            Technology is ultimately for people. I aim to create interfaces that feel calm, respectful of human attention, accessible, and delightful to interact with.
+          <h3 class="font-serif font-medium text-base text-cozy-charcoal dark:text-night-text">Upstream Open Source Driver</h3>
+          <p class="text-xs text-cozy-muted dark:text-night-muted leading-relaxed">
+            Consistently contributing critical patches, bug fixes, and performance optimizations upstream to world-class software foundations like seL4 and GNOME.
           </p>
         </div>
 
-        <!-- Pillar 3 -->
-        <div class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-3 soft-card">
-          <div class="w-9 h-9 rounded-xl bg-cozy-warmAmberLight dark:bg-night-border text-cozy-warmAmber dark:text-night-text flex items-center justify-center">
-            <i data-lucide="sparkles" class="w-4 h-4"></i>
+        <div class="p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-2.5 soft-card">
+          <div class="w-8 h-8 rounded-lg bg-cozy-warmAmberLight dark:bg-night-border text-cozy-warmAmber dark:text-night-text flex items-center justify-center">
+            <i data-lucide="zap" class="w-4 h-4"></i>
           </div>
-          <h3 class="font-serif font-medium text-lg text-cozy-charcoal dark:text-night-text">A Lifelong Craftsman</h3>
-          <p class="text-xs sm:text-sm text-cozy-muted dark:text-night-muted leading-relaxed">
-            Engineering is an evolving discipline. I aim to remain curious, embrace modern tools, contribute to open initiatives, and uplift peers around me.
+          <h3 class="font-serif font-medium text-base text-cozy-charcoal dark:text-night-text">Concurrency &amp; High-Throughput Specialist</h3>
+          <p class="text-xs text-cozy-muted dark:text-night-muted leading-relaxed">
+            Designing deadlock-free, high-performance distributed systems, lock-free data structures, and multithreaded AI/computer vision inference loops.
           </p>
         </div>
 
@@ -301,119 +326,175 @@
 
 
     <!-- ====================================================== -->
-    <!-- 4. SELECTED PROJECTS                                   -->
+    <!-- 4. OPEN SOURCE SYSTEMS ENGINEERING EXPERIENCE           -->
+    <!-- ====================================================== -->
+    <section id="experience" class="space-y-6 pt-4 border-t border-cozy-border/60 dark:border-night-border/60">
+      
+      <div class="space-y-1">
+        <span class="text-xs uppercase tracking-widest text-cozy-muted dark:text-night-muted font-medium">Track Record</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">Open Source Systems Engineering Experience</h2>
+      </div>
+
+      <div class="space-y-5">
+        
+        <!-- Experience 1: seL4 Foundation -->
+        <article class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 soft-card space-y-3.5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 border-b border-cozy-border/60 dark:border-night-border/60 pb-3">
+            <div>
+              <h3 class="font-serif text-lg font-medium text-cozy-charcoal dark:text-night-text">
+                seL4 Foundation / Trustworthy Systems (UNSW)
+              </h3>
+              <p class="text-xs text-cozy-terracotta dark:text-night-terracotta font-mono font-medium">
+                Upstream Systems Contributor &bull; Remote / Open Source
+              </p>
+            </div>
+            <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-cozy-sand/60 dark:bg-night-border text-cozy-charcoal dark:text-night-text w-fit">
+              Nov 2026
+            </span>
+          </div>
+
+          <ul class="text-xs sm:text-sm text-cozy-muted dark:text-night-muted space-y-2 list-disc list-inside leading-relaxed">
+            <li>
+              <strong>seL4 Microkit Multithreading Architecture:</strong> Engineered official multithreading synchronization architecture for the seL4 Microkit framework, reviewed and merged directly into <code class="font-mono text-xs px-1.5 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">seL4:main</code> (<strong>PR #624</strong>, addressing issue #602).
+            </li>
+            <li>
+              <strong>Cross-PD Mutual Exclusion:</strong> Designed cross-Protection Domain (PD) mutual exclusion utilizing standard C11 atomics (<code class="font-mono text-xs px-1.5 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">&lt;stdatomic.h&gt;</code>) with an <code class="font-mono text-xs">atomic_flag</code> spinlock over a 4KB shared memory region between concurrent processes.
+            </li>
+            <li>
+              <strong>Verification &amp; Multi-Arch:</strong> Formulated multi-architecture build support and automated verification logic ensuring thread-safe counter increments and race-condition prevention under simulated seL4 execution.
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-1.5 pt-1 text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">C11 Atomics</span>
+            <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">seL4 Microkit</span>
+            <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">Spinlocks</span>
+            <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">Shared Memory</span>
+            <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">QEMU</span>
+          </div>
+        </article>
+
+        <!-- Experience 2: GNOME Foundation -->
+        <article class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 soft-card space-y-3.5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 border-b border-cozy-border/60 dark:border-night-border/60 pb-3">
+            <div>
+              <h3 class="font-serif text-lg font-medium text-cozy-charcoal dark:text-night-text">
+                GNOME Foundation
+              </h3>
+              <p class="text-xs text-cozy-sage dark:text-night-sage font-mono font-medium">
+                Open Source Software Engineer (C, GObject &amp; JavaScript) &bull; Remote / Open Source
+              </p>
+            </div>
+            <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-cozy-sand/60 dark:bg-night-border text-cozy-charcoal dark:text-night-text w-fit">
+              Sep 2026 &ndash; Present
+            </span>
+          </div>
+
+          <ul class="text-xs sm:text-sm text-cozy-muted dark:text-night-muted space-y-2 list-disc list-inside leading-relaxed">
+            <li>
+              <strong>D-Bus IPC Race Condition Fix:</strong> Fixed asynchronous D-Bus IPC race conditions in GNOME Settings by synchronizing AccountsService D-Bus calls in C and GObject (<strong>!3516 merged upstream</strong>).
+            </li>
+            <li>
+              <strong>60 FPS Compositor Restoration:</strong> Eliminated multi-second compositor UI freezes during application icon drag-and-drop in GNOME Shell, restoring 60 FPS responsiveness by redesigning asynchronous state synchronization.
+            </li>
+            <li>
+              <strong>Display-Scale Modernization:</strong> Modernized display-scale widget constraints using GTK4 and Libadwaita in GNOME Settings (<strong>!3514 merged upstream</strong>), resolving slider responsiveness flaws across variable DPI displays.
+            </li>
+            <li>
+              <strong>Volume Control Desync Fix:</strong> Resolved state desynchronization in GNOME Shell volume controls, closing 4 upstream bug reports through refactored slider snapping logic in JavaScript/GJS.
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap gap-1.5 pt-1 text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">C / GObject</span>
+            <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">D-Bus IPC</span>
+            <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">GNOME Shell (GJS)</span>
+            <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">GTK4 / Libadwaita</span>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================== -->
+    <!-- 5. FEATURED ENGINEERING & APPLIED AI PROJECTS          -->
     <!-- ====================================================== -->
     <section id="projects" class="space-y-6 pt-4 border-t border-cozy-border/60 dark:border-night-border/60">
       
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-        <div class="space-y-1">
-          <span class="text-xs uppercase tracking-widest text-cozy-muted dark:text-night-muted font-medium">Selected Work</span>
-          <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">Projects I've Built</h2>
-        </div>
-        <span class="text-xs font-mono text-cozy-muted dark:text-night-muted">4 featured applications</span>
+      <div class="space-y-1">
+        <span class="text-xs uppercase tracking-widest text-cozy-muted dark:text-night-muted font-medium">Portfolio Projects</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">Featured Engineering &amp; Applied AI Projects</h2>
+        <p class="text-xs sm:text-sm text-cozy-muted dark:text-night-muted">Production-grade systems verified on GitHub.</p>
       </div>
 
-      <!-- Project Cards List -->
-      <div class="space-y-4" id="projectContainer">
+      <div class="space-y-5">
         
-        <!-- Project 1 -->
-        <article class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 soft-card space-y-3">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <h3 class="font-serif text-xl font-medium text-cozy-charcoal dark:text-night-text flex items-center gap-2">
-              <span>CloudVault</span>
-              <span class="text-xs font-sans px-2.5 py-0.5 rounded-full bg-cozy-sageLight dark:bg-night-sageBg text-cozy-sage dark:text-night-sage font-medium">Distributed Storage</span>
-            </h3>
-            <a href="https://github.com/Sadiqua-Parween/portfolio" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-cozy-muted hover:text-cozy-terracotta dark:hover:text-night-terracotta inline-flex items-center gap-1 transition-colors">
-              <span>View Source</span>
+        <!-- Project 1: Setu -->
+        <article class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 soft-card space-y-3.5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-cozy-border/60 dark:border-night-border/60 pb-3">
+            <div>
+              <h3 class="font-serif text-xl font-medium text-cozy-charcoal dark:text-night-text flex items-center gap-2">
+                <span>Setu &mdash; Bidirectional Real-Time Sign Language &amp; Speech Platform</span>
+              </h3>
+              <span class="text-xs font-mono text-cozy-sage dark:text-night-sage">Open Source &bull; Sep 2026</span>
+            </div>
+            <a href="https://github.com/Sadiqua-Parween" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-cozy-muted hover:text-cozy-terracotta dark:hover:text-night-terracotta inline-flex items-center gap-1 transition-colors">
+              <span>GitHub Repository</span>
               <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
             </a>
           </div>
 
-          <p class="text-sm text-cozy-muted dark:text-night-muted leading-relaxed">
-            An end-to-end encrypted cloud storage platform with chunked parallel file streaming, fine-grained access control lists, and shareable link generation. Built to handle large uploads smoothly with minimal memory footprint.
+          <p class="text-xs sm:text-sm text-cozy-muted dark:text-night-muted leading-relaxed">
+            An assistive real-time translation pipeline converting dynamic sign language gestures to synthesized speech and vice-versa, specifically optimized for edge processing.
           </p>
 
+          <ul class="text-xs sm:text-sm text-cozy-muted dark:text-night-muted space-y-1.5 list-disc list-inside leading-relaxed">
+            <li>Engineered real-time assistive translation pipeline translating sign language to speech and vice-versa; achieved <strong>94% recognition accuracy</strong> across 30+ dynamic sign gestures using MediaPipe landmarking.</li>
+            <li>Optimized computer vision inference loops using OpenCV multithreading, sustaining smooth <strong>30+ FPS processing</strong> on low-power client hardware with <strong>&lt;80ms end-to-end latency</strong>.</li>
+          </ul>
+
           <div class="flex flex-wrap items-center gap-1.5 pt-1 text-[11px] font-mono text-cozy-muted dark:text-night-muted">
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border/70">React</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border/70">Node.js</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border/70">Express</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border/70">PostgreSQL</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border/70">Docker</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">Python</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">OpenCV (Multithreaded)</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">MediaPipe</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">PyTorch</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">FastAPI</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">Web Speech API</span>
           </div>
         </article>
 
-        <!-- Project 2 -->
-        <article class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 soft-card space-y-3">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <h3 class="font-serif text-xl font-medium text-cozy-charcoal dark:text-night-text flex items-center gap-2">
-              <span>PulseMetrics</span>
-              <span class="text-xs font-sans px-2.5 py-0.5 rounded-full bg-cozy-terracottaLight dark:bg-night-terracottaBg text-cozy-terracotta dark:text-night-terracotta font-medium">Telemetry Monitor</span>
-            </h3>
-            <a href="https://github.com/Sadiqua-Parween/portfolio" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-cozy-muted hover:text-cozy-terracotta dark:hover:text-night-terracotta inline-flex items-center gap-1 transition-colors">
-              <span>View Source</span>
+        <!-- Project 2: Rentu -->
+        <article class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 soft-card space-y-3.5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-cozy-border/60 dark:border-night-border/60 pb-3">
+            <div>
+              <h3 class="font-serif text-xl font-medium text-cozy-charcoal dark:text-night-text flex items-center gap-2">
+                <span>Rentu &mdash; High-Concurrency Peer-to-Peer Resource Platform</span>
+              </h3>
+              <span class="text-xs font-mono text-cozy-terracotta dark:text-night-terracotta">Full-Stack Application &bull; Oct 2026</span>
+            </div>
+            <a href="https://github.com/Sadiqua-Parween/Rentu" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-cozy-muted hover:text-cozy-terracotta dark:hover:text-night-terracotta inline-flex items-center gap-1 transition-colors">
+              <span>GitHub: Rentu</span>
               <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
             </a>
           </div>
 
-          <p class="text-sm text-cozy-muted dark:text-night-muted leading-relaxed">
-            A high-throughput telemetry collector and API observability monitor. Tracks latency percentiles, uptime, SLA breaches, and logs requests with sub-15ms throughput using asynchronous event loops.
+          <p class="text-xs sm:text-sm text-cozy-muted dark:text-night-muted leading-relaxed">
+            A peer-to-peer sharing and rental resource platform engineered to sustain high concurrent traffic and prevent simultaneous resource checkout conflicts.
           </p>
 
-          <div class="flex flex-wrap items-center gap-1.5 pt-1 text-[11px] font-mono text-cozy-muted dark:text-night-muted">
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border/70">Python</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border/70">FastAPI</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border/70">Redis</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border/70">TimescaleDB</span>
-          </div>
-        </article>
-
-        <!-- Project 3 -->
-        <article class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 soft-card space-y-3">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <h3 class="font-serif text-xl font-medium text-cozy-charcoal dark:text-night-text flex items-center gap-2">
-              <span>NexusUI</span>
-              <span class="text-xs font-sans px-2.5 py-0.5 rounded-full bg-cozy-warmAmberLight dark:bg-night-border text-cozy-warmAmber dark:text-night-text font-medium">Design System</span>
-            </h3>
-            <a href="https://github.com/Sadiqua-Parween/portfolio" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-cozy-muted hover:text-cozy-terracotta dark:hover:text-night-terracotta inline-flex items-center gap-1 transition-colors">
-              <span>View Source</span>
-              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
-
-          <p class="text-sm text-cozy-muted dark:text-night-muted leading-relaxed">
-            An accessible, calming UI component library designed for developer speed and user clarity. Features WCAG AAA compliance, robust keyboard interactions, and graceful theme transitions.
-          </p>
+          <ul class="text-xs sm:text-sm text-cozy-muted dark:text-night-muted space-y-1.5 list-disc list-inside leading-relaxed">
+            <li>Eliminated concurrent booking race conditions by developing a transactional date-interval collision algorithm preventing double-booking across simultaneous checkout requests.</li>
+            <li>Engineered compound indexing on multi-attribute queries, reducing MongoDB query latency from 380ms to <strong>&lt;75ms</strong> under simulated concurrent load.</li>
+          </ul>
 
           <div class="flex flex-wrap items-center gap-1.5 pt-1 text-[11px] font-mono text-cozy-muted dark:text-night-muted">
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border/70">TypeScript</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border/70">React</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border/70">Tailwind CSS</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border/70">Storybook</span>
-          </div>
-        </article>
-
-        <!-- Project 4 -->
-        <article class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 soft-card space-y-3">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <h3 class="font-serif text-xl font-medium text-cozy-charcoal dark:text-night-text flex items-center gap-2">
-              <span>TaskFlow</span>
-              <span class="text-xs font-sans px-2.5 py-0.5 rounded-full bg-cozy-sageLight dark:bg-night-sageBg text-cozy-sage dark:text-night-sage font-medium">Focused Workspace</span>
-            </h3>
-            <a href="https://github.com/Sadiqua-Parween/portfolio" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-cozy-muted hover:text-cozy-terracotta dark:hover:text-night-terracotta inline-flex items-center gap-1 transition-colors">
-              <span>View Source</span>
-              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
-
-          <p class="text-sm text-cozy-muted dark:text-night-muted leading-relaxed">
-            A distraction-free collaborative project tracker built to cultivate deep focus. Includes real-time presence indicators, drag-and-drop workflow boards, and minimal visual noise.
-          </p>
-
-          <div class="flex flex-wrap items-center gap-1.5 pt-1 text-[11px] font-mono text-cozy-muted dark:text-night-muted">
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border/70">Next.js</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border/70">TypeScript</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border/70">PostgreSQL</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border/70">Prisma</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">React.js</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">Node.js</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">Express.js</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">MongoDB</span>
+            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">Docker</span>
           </div>
         </article>
 
@@ -423,87 +504,136 @@
 
 
     <!-- ====================================================== -->
-    <!-- 5. CONTACT & IN-MEMORY MESSAGE DISPATCH                -->
+    <!-- 6. TECHNICAL SKILLS                                    -->
+    <!-- ====================================================== -->
+    <section id="skills" class="space-y-5 pt-4 border-t border-cozy-border/60 dark:border-night-border/60">
+      
+      <div class="space-y-1">
+        <span class="text-xs uppercase tracking-widest text-cozy-muted dark:text-night-muted font-medium">Technical Toolkit</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">Technical Skills</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
+        
+        <div class="p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-2">
+          <span class="text-cozy-terracotta dark:text-night-terracotta font-semibold font-sans text-sm">Systems &amp; Low-Level</span>
+          <p class="text-cozy-muted dark:text-night-muted leading-relaxed">
+            C (C11/C99), C11 Atomics (<code class="text-cozy-charcoal dark:text-night-text">stdatomic.h</code>), Spinlocks, GObject, POSIX, D-Bus IPC, Memory Concurrency, Multithreading
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-2">
+          <span class="text-cozy-sage dark:text-night-sage font-semibold font-sans text-sm">OS &amp; Microkernels</span>
+          <p class="text-cozy-muted dark:text-night-muted leading-relaxed">
+            seL4 Microkit, Protection Domains (PD), Shared Memory Regions, Linux Internals (Compositor, GTK4, Libadwaita), QEMU
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-2">
+          <span class="text-cozy-warmAmber dark:text-night-text font-semibold font-sans text-sm">Languages &amp; Tools</span>
+          <p class="text-cozy-muted dark:text-night-muted leading-relaxed">
+            Python, JavaScript (GJS / Node.js), C++, SQL, Git &amp; GitHub Actions, Docker, Linux/Unix Shell
+          </p>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-2">
+          <span class="text-cozy-charcoal dark:text-night-text font-semibold font-sans text-sm">Applied AI &amp; Backends</span>
+          <p class="text-cozy-muted dark:text-night-muted leading-relaxed">
+            OpenCV (Multithreaded Loops), MediaPipe, PyTorch / TensorFlow, FastAPI, MongoDB, PostgreSQL
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================== -->
+    <!-- 7. CONTACT & IN-BROWSER DISPATCH                       -->
     <!-- ====================================================== -->
     <section id="contact" class="space-y-6 pt-4 border-t border-cozy-border/60 dark:border-night-border/60">
       
       <div class="space-y-1">
-        <span class="text-xs uppercase tracking-widest text-cozy-muted dark:text-night-muted font-medium">Say Hello</span>
-        <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">Let's Connect</h2>
+        <span class="text-xs uppercase tracking-widest text-cozy-muted dark:text-night-muted font-medium">Get In Touch</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">Contact Sadiqua</h2>
         <p class="text-cozy-muted dark:text-night-muted text-sm sm:text-base leading-relaxed max-w-xl">
-          Whether you have a role in mind, a potential project, or simply want to chat about technology and design, my inbox is always open.
+          Interested in my research placement, upstream contributions, or discussing systems software engineering? Feel free to reach out directly.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
         
-        <!-- Contact Information Details -->
+        <!-- Verified Contact Details -->
         <div class="md:col-span-5 space-y-4">
-          <div class="p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-4 text-sm">
+          <div class="p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-4 text-xs sm:text-sm">
             
             <div class="space-y-1">
-              <span class="text-xs font-mono text-cozy-muted dark:text-night-muted">Email</span>
+              <span class="text-[11px] font-mono text-cozy-muted dark:text-night-muted">Direct Email</span>
               <div>
-                <a href="mailto:sadiquaparween@gmail.com" class="font-medium text-cozy-charcoal dark:text-night-text hover:text-cozy-terracotta dark:hover:text-night-terracotta transition-colors">
-                  sadiquaparween@gmail.com
+                <a href="mailto:falaksadiqua786@gmail.com" class="font-medium text-cozy-charcoal dark:text-night-text hover:text-cozy-terracotta dark:hover:text-night-terracotta transition-colors">
+                  falaksadiqua786@gmail.com
                 </a>
               </div>
             </div>
 
             <div class="space-y-1">
-              <span class="text-xs font-mono text-cozy-muted dark:text-night-muted">Location</span>
+              <span class="text-[11px] font-mono text-cozy-muted dark:text-night-muted">Phone Number</span>
               <div class="font-medium text-cozy-charcoal dark:text-night-text">
-                India &bull; Available for Remote Worldwide
+                <a href="tel:+919508021556" class="hover:underline">+91 9508021556</a>
               </div>
             </div>
 
             <div class="space-y-1">
-              <span class="text-xs font-mono text-cozy-muted dark:text-night-muted">Profiles</span>
-              <div class="flex items-center gap-3 font-medium">
-                <a href="https://github.com/Sadiqua-Parween/portfolio" target="_blank" rel="noopener noreferrer" class="text-cozy-terracotta dark:text-night-terracotta hover:underline">
-                  GitHub
+              <span class="text-[11px] font-mono text-cozy-muted dark:text-night-muted">Official Profiles</span>
+              <div class="flex flex-col gap-1.5 font-medium text-xs pt-0.5">
+                <a href="https://github.com/Sadiqua-Parween" target="_blank" rel="noopener noreferrer" class="text-cozy-terracotta dark:text-night-terracotta hover:underline inline-flex items-center gap-1.5">
+                  <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                  <span>github.com/Sadiqua-Parween</span>
                 </a>
-                <span class="text-cozy-border dark:text-night-border">&bull;</span>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-cozy-sage dark:text-night-sage hover:underline">
-                  LinkedIn
+                <a href="https://gitlab.gnome.org/Sadiqua" target="_blank" rel="noopener noreferrer" class="text-cozy-sage dark:text-night-sage hover:underline inline-flex items-center gap-1.5">
+                  <i data-lucide="git-merge" class="w-3.5 h-3.5"></i>
+                  <span>gitlab.gnome.org/Sadiqua</span>
+                </a>
+                <a href="https://www.linkedin.com/in/sadiquaparween/" target="_blank" rel="noopener noreferrer" class="text-cozy-warmAmber dark:text-night-text hover:underline inline-flex items-center gap-1.5">
+                  <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
+                  <span>linkedin.com/in/sadiquaparween</span>
                 </a>
               </div>
             </div>
 
           </div>
 
-          <!-- Note about self-contained single-page architecture -->
           <div class="p-4 rounded-xl bg-cozy-sand/40 dark:bg-night-card/50 border border-cozy-border/60 dark:border-night-border/60 text-xs text-cozy-muted dark:text-night-muted space-y-1">
             <div class="font-medium text-cozy-charcoal dark:text-night-text flex items-center gap-1.5">
-              <i data-lucide="coffee" class="w-3.5 h-3.5 text-cozy-terracotta dark:text-night-terracotta"></i>
-              <span>Self-Contained Backend</span>
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-cozy-sage dark:text-night-sage"></i>
+              <span>Single-Page In-Browser Backend</span>
             </div>
-            <p>Messages submitted through this form are processed and recorded right in this single page's storage, with instant confirmation.</p>
+            <p>Submissions are safely validated and recorded right in this single page's storage, with immediate confirmation.</p>
           </div>
         </div>
 
-        <!-- Gentle Contact Form -->
+        <!-- Contact Form -->
         <div class="md:col-span-7 p-6 sm:p-7 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80">
           <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4 text-sm">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div class="space-y-1">
                 <label class="block text-xs font-medium text-cozy-charcoal dark:text-night-text">Your Name *</label>
-                <input type="text" id="senderName" required placeholder="Jane Doe" class="w-full px-3.5 py-2.5 rounded-xl bg-cozy-cream/60 dark:bg-night-bg/60 border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text placeholder-cozy-muted/60 dark:placeholder-night-muted/50 focus:outline-none focus:border-cozy-sage dark:focus:border-night-sage text-sm">
+                <input type="text" id="senderName" required placeholder="Dr. Alex Rivera" class="w-full px-3.5 py-2.5 rounded-xl bg-cozy-cream/60 dark:bg-night-bg/60 border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text placeholder-cozy-muted/60 dark:placeholder-night-muted/50 focus:outline-none focus:border-cozy-sage dark:focus:border-night-sage text-sm">
               </div>
               <div class="space-y-1">
                 <label class="block text-xs font-medium text-cozy-charcoal dark:text-night-text">Your Email *</label>
-                <input type="email" id="senderEmail" required placeholder="jane@example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-cozy-cream/60 dark:bg-night-bg/60 border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text placeholder-cozy-muted/60 dark:placeholder-night-muted/50 focus:outline-none focus:border-cozy-sage dark:focus:border-night-sage text-sm">
+                <input type="email" id="senderEmail" required placeholder="alex@research-lab.org" class="w-full px-3.5 py-2.5 rounded-xl bg-cozy-cream/60 dark:bg-night-bg/60 border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text placeholder-cozy-muted/60 dark:placeholder-night-muted/50 focus:outline-none focus:border-cozy-sage dark:focus:border-night-sage text-sm">
               </div>
             </div>
 
             <div class="space-y-1">
-              <label class="block text-xs font-medium text-cozy-charcoal dark:text-night-text">Subject</label>
-              <input type="text" id="senderSubject" placeholder="Software Engineering Role / Project Idea" class="w-full px-3.5 py-2.5 rounded-xl bg-cozy-cream/60 dark:bg-night-bg/60 border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text placeholder-cozy-muted/60 dark:placeholder-night-muted/50 focus:outline-none focus:border-cozy-sage dark:focus:border-night-sage text-sm">
+              <label class="block text-xs font-medium text-cozy-charcoal dark:text-night-text">Subject *</label>
+              <input type="text" id="senderSubject" required placeholder="6-Month Research Placement / Systems Engineering Role" class="w-full px-3.5 py-2.5 rounded-xl bg-cozy-cream/60 dark:bg-night-bg/60 border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text placeholder-cozy-muted/60 dark:placeholder-night-muted/50 focus:outline-none focus:border-cozy-sage dark:focus:border-night-sage text-sm">
             </div>
 
             <div class="space-y-1">
               <label class="block text-xs font-medium text-cozy-charcoal dark:text-night-text">Message *</label>
-              <textarea id="senderMessage" required rows="4" placeholder="Hello Sadiqua, I'd love to connect regarding..." class="w-full px-3.5 py-2.5 rounded-xl bg-cozy-cream/60 dark:bg-night-bg/60 border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text placeholder-cozy-muted/60 dark:placeholder-night-muted/50 focus:outline-none focus:border-cozy-sage dark:focus:border-night-sage text-sm"></textarea>
+              <textarea id="senderMessage" required rows="4" placeholder="Hello Sadiqua, we reviewed your seL4 PR and would like to discuss..." class="w-full px-3.5 py-2.5 rounded-xl bg-cozy-cream/60 dark:bg-night-bg/60 border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text placeholder-cozy-muted/60 dark:placeholder-night-muted/50 focus:outline-none focus:border-cozy-sage dark:focus:border-night-sage text-sm"></textarea>
             </div>
 
             <button type="submit" id="submitBtn" class="px-6 py-2.5 rounded-full bg-cozy-charcoal text-cozy-cream dark:bg-night-text dark:text-night-bg font-medium text-xs hover:opacity-90 transition-opacity flex items-center justify-center gap-1.5">
@@ -512,10 +642,9 @@
             </button>
           </form>
 
-          <!-- Success Alert Area -->
           <div id="formSuccessAlert" class="hidden mt-4 p-3.5 rounded-xl bg-cozy-sageLight dark:bg-night-sageBg border border-cozy-sage/40 dark:border-night-sage/40 text-xs text-cozy-sage dark:text-night-sage space-y-0.5">
-            <div class="font-medium">Thank you! Your message has been received.</div>
-            <p class="text-cozy-muted dark:text-night-muted text-[11px]">It has been logged in this page's memory. I look forward to reading it!</p>
+            <div class="font-medium">Thank you! Your message has been safely recorded.</div>
+            <p class="text-cozy-muted dark:text-night-muted text-[11px]">Logged in local storage. Sadiqua will review it promptly!</p>
           </div>
         </div>
 
@@ -534,27 +663,24 @@
       <div class="flex items-center gap-2">
         <span>&copy; <span id="year">2026</span> Sadiqua Parween</span>
         <span>&bull;</span>
-        <span>Built with simplicity & calm</span>
+        <span>Newton School of Technology, S-VYASA University</span>
       </div>
       <div class="flex items-center gap-4">
-        <a href="#about" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">About</a>
-        <a href="#projects" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Projects</a>
-        <a href="#contact" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Contact</a>
-        <a href="#" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Back to Top &uarr;</a>
+        <a href="https://github.com/Sadiqua-Parween" target="_blank" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">GitHub</a>
+        <a href="https://gitlab.gnome.org/Sadiqua" target="_blank" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">GitLab</a>
+        <a href="https://www.linkedin.com/in/sadiquaparween/" target="_blank" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">LinkedIn</a>
+        <a href="#" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Top &uarr;</a>
       </div>
     </div>
   </footer>
 
 
   <!-- ======================================================== -->
-  <!-- IN-BROWSER BACKEND CONTROLLER & INTERACTIVITY (JS)       -->
+  <!-- IN-BROWSER BACKEND CONTROLLER (JAVASCRIPT)               -->
   <!-- ======================================================== -->
   <script>
-    /**
-     * Self-contained in-memory & LocalStorage backend store
-     */
     const LocalBackend = (function() {
-      const STORAGE_KEY = 'sadiqua_cozy_portfolio_messages_v1';
+      const STORAGE_KEY = 'sadiqua_accurate_messages_v1';
 
       function loadMessages() {
         try {
@@ -573,15 +699,13 @@
       let messages = loadMessages();
 
       return {
-        // Dispatches contact message submission
         dispatchContact: async function(data) {
-          // Simulated gentle network delay (30ms)
-          await new Promise(r => setTimeout(r, 30));
+          await new Promise(r => setTimeout(r, 25));
           const entry = {
             id: Date.now(),
             name: data.name.trim(),
             email: data.email.trim(),
-            subject: (data.subject || 'General Inquiry').trim(),
+            subject: data.subject.trim(),
             message: data.message.trim(),
             timestamp: new Date().toISOString()
           };
@@ -593,7 +717,6 @@
       };
     })();
 
-    // Handle Contact Form Submission
     async function handleFormSubmit(e) {
       e.preventDefault();
       const btn = document.getElementById('submitBtn');
@@ -619,33 +742,55 @@
       }
     }
 
-    // Download formatted resume text
     function downloadResume() {
       const text = `========================================================
-SADIQUA PARWEEN - SOFTWARE ENGINEER
-Email: sadiquaparween@gmail.com
-GitHub: https://github.com/Sadiqua-Parween/portfolio
-Location: India (Available for Remote Worldwide)
+SADIQUA PARWEEN
+Systems & Concurrency Software Engineer | seL4 & GNOME Upstream Contributor
+Email: falaksadiqua786@gmail.com | Phone: +91 9508021556
+GitHub: https://github.com/Sadiqua-Parween | GitLab: https://gitlab.gnome.org/Sadiqua
+LinkedIn: https://www.linkedin.com/in/sadiquaparween/
 ========================================================
 
-ABOUT:
-Full-stack software engineer with a focus on thoughtful engineering, clean architecture, and building calm, human-centered digital experiences.
+PLACEMENT & WORK RIGHTS:
+Seeking an accredited 6-Month Full-Time Research Placement (August 2026 – January 2027) for academic credit.
+Eligible for the Subclass 408 (Research Stream) Visa, fully supported by Home University No Objection Certificate (NOC) and institutional credit endorsement.
+
+OPEN SOURCE SYSTEMS ENGINEERING EXPERIENCE:
+1. seL4 Foundation / Trustworthy Systems (UNSW) (Nov 2026)
+   Upstream Systems Contributor (Remote / Open Source)
+   - Engineered official multithreading synchronization architecture for the seL4 Microkit framework, reviewed and merged directly into seL4:main (PR #624, addressing issue #602).
+   - Designed cross-Protection Domain (PD) mutual exclusion utilizing standard C11 atomics (<stdatomic.h>) with an atomic_flag spinlock over a 4KB shared memory region between concurrent processes.
+   - Formulated multi-architecture build support and automated verification logic ensuring thread-safe counter increments and race-condition prevention under simulated seL4 execution.
+
+2. GNOME Foundation (Sep 2026 – Present)
+   Open Source Software Engineer (C, GObject & JavaScript) (Remote / Open Source)
+   - Fixed asynchronous D-Bus IPC race conditions in GNOME Settings by synchronizing AccountsService D-Bus calls in C and GObject (!3516 merged upstream).
+   - Eliminated multi-second compositor UI freezes during application icon drag-and-drop in GNOME Shell, restoring 60 FPS responsiveness by redesigning asynchronous state synchronization.
+   - Modernized display-scale widget constraints using GTK4 and Libadwaita in GNOME Settings (!3514 merged upstream), resolving slider responsiveness flaws across variable DPI displays.
+   - Resolved state desynchronization in GNOME Shell volume controls, closing 4 upstream bug reports through refactored slider snapping logic in JavaScript/GJS.
 
 TECHNICAL SKILLS:
-- Languages: JavaScript (ES6+), TypeScript, Python, SQL, HTML5/CSS3
-- Frontend: React.js, Next.js, Tailwind CSS, Responsive Design, Web Accessibility
-- Backend: Node.js, Express, Python, FastAPI, REST APIs, Microservices
-- Databases: PostgreSQL, MongoDB, Redis
-- Tools & Cloud: Docker, Git, GitHub, Linux Shell
+- Systems & Low-Level: C (C11/C99), C11 Atomics (stdatomic.h), Spinlocks, GObject, POSIX, D-Bus IPC, Memory Concurrency, Multithreading
+- OS & Microkernels: seL4 Microkit, Protection Domains, Shared Memory Regions, Linux Internals (Compositor, GTK4, Libadwaita), QEMU
+- Languages & Tools: Python, JavaScript (GJS / Node.js), C++, SQL, Git & GitHub Actions, Docker, Linux/Unix Shell
+- Applied AI & Backends: OpenCV (Multithreaded Loops), MediaPipe, PyTorch / TensorFlow, FastAPI, MongoDB, PostgreSQL
 
-FEATURED PROJECTS:
-1. CloudVault - Distributed File Storage & Parallel Sync
-2. PulseMetrics - Real-Time Telemetry Monitor (<15ms latency)
-3. NexusUI - Accessible, Calming UI Component System
-4. TaskFlow - Focused Collaborative Workspace
+FEATURED ENGINEERING & APPLIED AI PROJECTS:
+1. Setu — Bidirectional Real-Time Sign Language & Speech Platform (Sep 2026)
+   Python, OpenCV, MediaPipe, PyTorch, FastAPI, Web Speech API | Open Source
+   - Engineered real-time assistive translation pipeline translating sign language to speech and vice-versa; achieved 94% recognition accuracy across 30+ dynamic sign gestures using MediaPipe landmarking.
+   - Optimized computer vision inference loops using OpenCV multithreading, sustaining smooth 30+ FPS processing on low-power client hardware with <80ms end-to-end latency.
+
+2. Rentu — High-Concurrency Peer-to-Peer Resource Platform (Oct 2026)
+   React.js, Node.js, Express.js, MongoDB, Docker | Full-Stack Application
+   - Eliminated concurrent booking race conditions by developing a transactional date-interval collision algorithm preventing double-booking across simultaneous checkout requests.
+   - Engineered compound indexing on multi-attribute queries, reducing MongoDB query latency from 380ms to <75ms under simulated concurrent load.
 
 EDUCATION:
-B.Tech in Computer Science & Engineering
+Bachelor of Technology in Computer Science & Artificial Intelligence
+Newton School of Technology, S-VYASA University — Bengaluru, India
+Expected May 2029 | CGPA: 7.57 / 10.0
+Relevant Systems Coursework: Operating Systems, Distributed Systems, Data Structures & Algorithms, Computer Networks, Database Systems.
 ========================================================`;
       const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
       const url = URL.createObjectURL(blob);
@@ -658,7 +803,6 @@ B.Tech in Computer Science & Engineering
       URL.revokeObjectURL(url);
     }
 
-    // Theme Toggle (Cozy Morning / Calm Evening)
     function toggleTheme() {
       const html = document.documentElement;
       const isDark = html.classList.toggle('dark');
@@ -680,13 +824,10 @@ B.Tech in Computer Science & Engineering
       }
     }
 
-    // Initialize on DOM load
     document.addEventListener('DOMContentLoaded', () => {
-      // Set current year
       const y = document.getElementById('year');
       if (y) y.textContent = new Date().getFullYear();
 
-      // Check saved theme or system preference
       try {
         const saved = localStorage.getItem('sadiqua_theme');
         if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -698,7 +839,6 @@ B.Tech in Computer Science & Engineering
         }
       } catch (e) {}
 
-      // Initialize icons
       if (window.lucide) lucide.createIcons();
     });
   </script>
