@@ -117,10 +117,10 @@
 
       <!-- Right Controls -->
       <div class="flex items-center gap-3">
-        <button onclick="downloadResume()" class="text-xs font-medium px-4 py-2 rounded-full bg-cozy-sand/70 dark:bg-night-card hover:bg-cozy-sand dark:hover:bg-night-border border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text transition-all flex items-center gap-1.5">
+        <a href="Sadiqua_Parween_Resume.pdf" download="Sadiqua_Parween_Resume.pdf" target="_blank" class="text-xs font-medium px-4 py-2 rounded-full bg-cozy-sand/70 dark:bg-night-card hover:bg-cozy-sand dark:hover:bg-night-border border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text transition-all flex items-center gap-1.5" title="Download Resume (PDF)">
           <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
-          <span>Resume</span>
-        </button>
+          <span>Resume (PDF)</span>
+        </a>
 
         <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2 rounded-full hover:bg-cozy-sand/60 dark:hover:bg-night-card border border-transparent hover:border-cozy-border dark:border-night-border text-cozy-muted dark:text-night-muted transition-colors" title="Toggle Day/Night Mode">
           <i data-lucide="moon" id="moonIcon" class="w-4 h-4"></i>
@@ -752,65 +752,13 @@
     }
 
     function downloadResume() {
-      const text = `========================================================
-SADIQUA PARWEEN
-Phone: +919508021556 | Email: falaksadiqua786@gmail.com
-LinkedIn: https://www.linkedin.com/in/sadiquaparween/
-GitHub: https://github.com/Sadiqua-Parween
-GitLab: https://gitlab.gnome.org/Sadiqua
-========================================================
-
-PROFESSIONAL SUMMARY:
-Proactive Software Engineering student at Newton School of Technology (S-VYASA) with strong foundations in Data Structures, Algorithms, and Full-Stack Development. Experienced in building responsive web applications and scalable REST APIs using modern tech stacks. Passionate about writing clean, efficient code and solving real-world problems.
-
-EDUCATION:
-- 2025-2029: Bachelor of Technology (Computer Science and AI)
-  Newton School of Technology, S-VYASA University | CGPA: 7.57/10.0
-- 2022-2024: Intermediate (Class XII)
-  Sacred Heart Convent | 84.0%
-- 2021-2022: Matriculation (Class X)
-  Tagore Academy | 86.0%
-
-EXPERIENCE:
-Open Source Contributor | September 2026 - Present | Remote
-GNOME Foundation (GitLab: https://gitlab.gnome.org/Sadiqua)
-Open Source Software Engineer | Sep 2026 – Present
-- Merged responsive slider UI alignment into upstream GNOME Settings (GNOME 52) using GTK4 and Libadwaita, approved by core maintainers to ship to millions of Linux users.
-- Resolved an asynchronous state desynchronization bug in GNOME Shell (JavaScript/GJS), closing 4 open upstream issues affecting system-wide volume controls.
-- Eliminated a multi-second UI freeze in GNOME Shell by refactoring asynchronous drag-and-drop state sync during app icon reordering.
-- Rectified session state tracking logic in C and GObject for GNOME Control Center, preventing improper dismissal of system logout prompts on locale change.
-
-PROJECTS:
-1. Rentu (GitHub: https://github.com/Sadiqua-Parween/Rentu) | October 2026
-   Tech Stack: React.js, Node.js, Express.js, MongoDB, JWT, Cloudinary, Vercel/Render
-   - Developed and deployed a peer-to-peer asset sharing platform to solve campus resource underutilization, enabling students to list, discover, and rent high-value items (calculators, cameras, books) instead of purchasing them.
-   - Solved the concurrent booking race condition by designing a transactional date-interval collision algorithm that prevents double-booking across simultaneous checkout requests.
-   - Optimized multi-attribute search (price, location, category) by implementing compound indexing in MongoDB, reducing query latency from 380ms to under 75ms under simulated concurrent load.
-   - Engineered the full-stack architecture end-to-end, integrated Cloudinary for optimized media pipelines, and deployed the live application.
-
-2. Setu – Bidirectional Sign Language & Speech Communication System | September 2026
-   Tech Stack: Python, OpenCV, MediaPipe, TensorFlow / PyTorch, React.js, FastAPI, Web Speech API
-   - Engineered a real-time assistive communication platform bridging the gap for deaf and mute individuals via bidirectional Sign-to-Speech and Text-to-Sign conversion.
-   - Trained a gesture classification pipeline using MediaPipe hand landmarks and deep learning, achieving 94% recognition accuracy across 30+ static and dynamic sign gestures.
-   - Optimized computer vision inference loops using OpenCV multi-threading, sustaining smooth 30+ FPS processing on low-power client hardware with sub-80ms translation latency.
-   - Integrated the Web Speech API and dynamic avatar animations to convert spoken/text inputs into continuous visual sign sequences in real time.
-
-SKILLS:
-• Computer Language: JavaScript, Python, Java
-• Frameworks & Libraries: React, Node.js, Express JS, Tailwind CSS, FastAPI
-• Databases & Data Tools: PostgreSQL, MongoDB
-• Courses: Data Structures and Algorithms
-• Version Control / Developer Tools: Git and Github, Docker
-========================================================`;
-      const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
-      a.href = url;
-      a.download = 'Sadiqua_Parween_Resume.txt';
+      a.href = 'Sadiqua_Parween_Resume.pdf';
+      a.download = 'Sadiqua_Parween_Resume.pdf';
+      a.target = '_blank';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
-      URL.revokeObjectURL(url);
     }
 
     function toggleTheme() {
