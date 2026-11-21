@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sadiqua Parween &bull; Software Engineer & Open Source Contributor</title>
-  <meta name="description" content="Portfolio of Sadiqua Parween - Software Engineering student at Newton School of Technology (S-VYASA), GNOME Open Source Contributor, and Full-Stack Developer.">
+  <title>Sadiqua Parween &bull; Software Engineer</title>
+  <meta name="description" content="Portfolio of Sadiqua Parween - Software Engineering student at Newton School of Technology and GNOME contributor.">
 
-  <!-- Google Fonts: Editorial warm serif + clean geometric sans -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -26,29 +26,25 @@
           colors: {
             cozy: {
               cream: '#faf7f2',
-              creamDark: '#f4ede2',
-              sand: '#ece4d6',
               card: '#ffffff',
-              border: '#e7ded0',
-              charcoal: '#2d2824',
-              muted: '#736c64',
+              border: '#e8dfd2',
+              charcoal: '#2b2724',
+              muted: '#736b63',
               sage: '#577863',
-              sageLight: '#ebf1ed',
+              sageLight: '#ebf2ed',
               terracotta: '#c5684d',
               terracottaLight: '#fbece7',
-              warmAmber: '#c99142',
-              warmAmberLight: '#fbf4e8',
+              sand: '#ede5d8',
             },
             night: {
-              bg: '#1b1916',
-              card: '#23201c',
-              border: '#353029',
+              bg: '#181614',
+              card: '#221f1c',
+              border: '#36312a',
               text: '#ede8e1',
-              muted: '#9e968b',
+              muted: '#9c9489',
               sage: '#8fa996',
               sageBg: '#212a23',
               terracotta: '#df896f',
-              terracottaBg: '#32231e',
             }
           }
         }
@@ -62,39 +58,27 @@
   <style>
     html {
       background-color: #faf7f2;
-      color: #2d2824;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      color: #2b2724;
+      transition: background-color 0.25s ease, color 0.25s ease;
     }
     html.dark {
-      background-color: #1b1916;
+      background-color: #181614;
       color: #ede8e1;
     }
 
-    /* Soft custom scrollbar */
-    ::-webkit-scrollbar { width: 7px; }
+    ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb {
       background: #d8cfbf;
       border-radius: 9999px;
     }
-    .dark ::-webkit-scrollbar-thumb {
-      background: #3c362e;
-    }
-    ::-webkit-scrollbar-thumb:hover { background: #beb29f; }
+    .dark ::-webkit-scrollbar-thumb { background: #3b352e; }
 
-    /* Soft cards hover */
     .soft-card {
-      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, border-color 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
     .soft-card:hover {
       transform: translateY(-2px);
-    }
-
-    .portrait-shadow {
-      box-shadow: 0 16px 36px -12px rgba(95, 78, 62, 0.16);
-    }
-    .dark .portrait-shadow {
-      box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.5);
     }
   </style>
 </head>
@@ -102,26 +86,28 @@
 <body class="font-sans antialiased text-cozy-charcoal dark:text-night-text min-h-screen flex flex-col justify-between selection:bg-[#e8ddcd] dark:selection:bg-[#3d362c]">
 
   <!-- ======================================================== -->
-  <!-- NAVIGATION BAR                                           -->
+  <!-- FULL-WIDTH NAVBAR                                        -->
   <!-- ======================================================== -->
-  <header class="sticky top-0 z-40 bg-[#faf7f2]/92 dark:bg-[#1b1916]/92 backdrop-blur-md border-b border-cozy-border/70 dark:border-night-border/70 transition-colors">
-    <div class="max-w-4xl mx-auto px-5 sm:px-8 py-3.5 flex items-center justify-between">
+  <header class="sticky top-0 z-40 bg-[#faf7f2]/95 dark:bg-[#181614]/95 backdrop-blur-md border-b border-cozy-border/80 dark:border-night-border/80 w-full">
+    <div class="w-full px-5 sm:px-10 lg:px-16 py-4 flex items-center justify-between">
       
-      <!-- Brand & Status Pill -->
-      <a href="#" class="flex items-center gap-2.5 group">
-        <span class="w-2.5 h-2.5 rounded-full bg-cozy-sage dark:bg-night-sage inline-block animate-pulse"></span>
-        <div class="flex flex-col">
-          <span class="font-serif font-semibold text-lg tracking-tight group-hover:text-cozy-terracotta dark:group-hover:text-night-terracotta transition-colors leading-tight">
+      <!-- Brand -->
+      <a href="#" class="flex items-center gap-3">
+        <span class="w-2.5 h-2.5 rounded-full bg-cozy-sage dark:bg-night-sage inline-block"></span>
+        <div class="flex items-baseline gap-2">
+          <span class="font-serif font-semibold text-lg sm:text-xl tracking-tight text-cozy-charcoal dark:text-night-text">
             Sadiqua Parween
           </span>
-          <span class="text-[11px] font-mono text-cozy-muted dark:text-night-muted leading-tight">Software Engineer &bull; GNOME Contributor</span>
+          <span class="hidden sm:inline text-xs text-cozy-muted dark:text-night-muted font-normal">
+            &bull; Software Engineer
+          </span>
         </div>
       </a>
 
       <!-- Navigation Links -->
-      <nav class="hidden md:flex items-center space-x-6 text-sm text-cozy-muted dark:text-night-muted font-medium">
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-cozy-muted dark:text-night-muted">
         <a href="#about" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">About</a>
-        <a href="#aim" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">What I Aim to Be</a>
+        <a href="#aim" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Goals</a>
         <a href="#experience" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Experience</a>
         <a href="#projects" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Projects</a>
         <a href="#education" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Education</a>
@@ -129,14 +115,14 @@
         <a href="#contact" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Contact</a>
       </nav>
 
-      <!-- Action Buttons -->
-      <div class="flex items-center gap-2.5">
-        <button onclick="downloadResume()" class="text-xs font-medium px-3.5 py-1.5 rounded-full bg-cozy-sand/60 dark:bg-night-card hover:bg-cozy-sand dark:hover:bg-night-border border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text transition-all flex items-center gap-1.5">
-          <i data-lucide="file-text" class="w-3.5 h-3.5 text-cozy-muted dark:text-night-muted"></i>
+      <!-- Right Controls -->
+      <div class="flex items-center gap-3">
+        <button onclick="downloadResume()" class="text-xs font-medium px-4 py-2 rounded-full bg-cozy-sand/70 dark:bg-night-card hover:bg-cozy-sand dark:hover:bg-night-border border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text transition-all flex items-center gap-1.5">
+          <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
           <span>Resume</span>
         </button>
 
-        <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2 rounded-full hover:bg-cozy-sand/60 dark:hover:bg-night-card border border-transparent hover:border-cozy-border dark:hover:border-night-border text-cozy-muted dark:text-night-muted transition-colors" title="Toggle Calm Day/Night Theme">
+        <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2 rounded-full hover:bg-cozy-sand/60 dark:hover:bg-night-card border border-transparent hover:border-cozy-border dark:hover:border-night-border text-cozy-muted dark:text-night-muted transition-colors" title="Toggle Day/Night Mode">
           <i data-lucide="moon" id="moonIcon" class="w-4 h-4"></i>
           <i data-lucide="sun" id="sunIcon" class="w-4 h-4 hidden"></i>
         </button>
@@ -147,71 +133,62 @@
 
 
   <!-- ======================================================== -->
-  <!-- MAIN CONTENT CONTAINER                                   -->
+  <!-- FULL-WIDTH MAIN CONTENT                                  -->
   <!-- ======================================================== -->
-  <main class="max-w-4xl mx-auto px-5 sm:px-8 py-10 sm:py-14 space-y-16 sm:space-y-20 flex-1">
+  <main class="w-full px-5 sm:px-10 lg:px-16 py-8 sm:py-12 space-y-16 sm:space-y-20 flex-1">
 
     <!-- ====================================================== -->
     <!-- 1. HERO SECTION                                         -->
     <!-- ====================================================== -->
-    <section class="grid grid-cols-1 md:grid-cols-12 gap-8 sm:gap-10 items-center">
+    <section class="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-2">
       
-      <!-- Left: Introduction Text -->
-      <div class="md:col-span-7 space-y-4 order-2 md:order-1">
+      <!-- Left: Introduction -->
+      <div class="lg:col-span-8 space-y-4">
         
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cozy-sageLight dark:bg-night-sageBg text-cozy-sage dark:text-night-sage text-xs font-medium">
           <span class="w-1.5 h-1.5 rounded-full bg-cozy-sage dark:bg-night-sage"></span>
-          <span>Open Source Contributor &bull; GNOME Foundation</span>
+          <span>Open Source Contributor at GNOME</span>
         </div>
 
-        <h1 class="font-serif text-3xl sm:text-4xl lg:text-[42px] font-normal leading-[1.2] tracking-tight">
+        <h1 class="font-serif text-3xl sm:text-5xl font-normal leading-[1.15] tracking-tight text-cozy-charcoal dark:text-night-text">
           Hi, I'm <span class="italic font-medium text-cozy-terracotta dark:text-night-terracotta">Sadiqua Parween</span>.
         </h1>
 
-        <p class="text-cozy-muted dark:text-night-muted text-base sm:text-lg leading-relaxed font-normal">
-          Proactive Software Engineering student at <strong>Newton School of Technology (S-VYASA)</strong> with strong foundations in Data Structures, Algorithms, and Full-Stack Development. Experienced in building responsive web applications and scalable REST APIs using modern tech stacks.
+        <p class="text-cozy-muted dark:text-night-muted text-base sm:text-lg leading-relaxed max-w-3xl">
+          I am a Software Engineering student at <strong>Newton School of Technology (S-VYASA University)</strong>. I enjoy building responsive web applications, creating fast REST APIs, and contributing to open-source software.
         </p>
 
-        <!-- Social Proof Badges from verified accounts -->
+        <!-- Direct Social Links -->
         <div class="flex flex-wrap items-center gap-3 pt-1 text-xs font-mono">
-          <a href="https://github.com/Sadiqua-Parween" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border hover:border-cozy-terracotta dark:hover:border-night-terracotta flex items-center gap-1.5 transition-colors">
-            <i data-lucide="github" class="w-3.5 h-3.5"></i>
-            <span>github.com/Sadiqua-Parween</span>
+          <a href="https://github.com/Sadiqua-Parween" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border hover:border-cozy-terracotta dark:hover:border-night-terracotta flex items-center gap-2 transition-colors">
+            <i data-lucide="github" class="w-4 h-4 text-cozy-charcoal dark:text-night-text"></i>
+            <span>GitHub</span>
           </a>
-          <a href="https://gitlab.gnome.org/Sadiqua" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border hover:border-cozy-sage dark:hover:border-night-sage flex items-center gap-1.5 transition-colors">
-            <i data-lucide="git-merge" class="w-3.5 h-3.5 text-cozy-sage dark:text-night-sage"></i>
-            <span>gitlab.gnome.org/Sadiqua</span>
+          <a href="https://gitlab.gnome.org/Sadiqua" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border hover:border-cozy-sage dark:hover:border-night-sage flex items-center gap-2 transition-colors">
+            <i data-lucide="git-merge" class="w-4 h-4 text-cozy-sage dark:text-night-sage"></i>
+            <span>GNOME GitLab</span>
           </a>
-          <a href="https://www.linkedin.com/in/sadiquaparween/" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border hover:border-cozy-warmAmber flex items-center gap-1.5 transition-colors">
-            <i data-lucide="linkedin" class="w-3.5 h-3.5 text-cozy-warmAmber"></i>
-            <span>linkedin.com/in/sadiquaparween</span>
+          <a href="https://www.linkedin.com/in/sadiquaparween/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border hover:border-cozy-terracotta dark:hover:border-night-terracotta flex items-center gap-2 transition-colors">
+            <i data-lucide="linkedin" class="w-4 h-4 text-[#0a66c2]"></i>
+            <span>LinkedIn</span>
           </a>
-        </div>
-
-        <div class="flex flex-wrap items-center gap-3.5 pt-2">
-          <a href="#projects" class="px-5 py-2.5 rounded-full bg-cozy-charcoal text-cozy-cream dark:bg-night-text dark:text-night-bg font-medium text-sm hover:opacity-90 transition-opacity">
-            Explore Projects &darr;
-          </a>
-          <a href="#contact" class="px-5 py-2.5 rounded-full bg-cozy-card dark:bg-night-card hover:bg-cozy-creamDark dark:hover:bg-night-border border border-cozy-border dark:border-night-border text-sm font-medium transition-colors">
-            Get in Touch
+          <a href="mailto:falaksadiqua786@gmail.com" class="px-3.5 py-2 rounded-xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border hover:border-cozy-charcoal dark:hover:border-night-text flex items-center gap-2 transition-colors">
+            <i data-lucide="mail" class="w-4 h-4 text-cozy-terracotta"></i>
+            <span>falaksadiqua786@gmail.com</span>
           </a>
         </div>
 
       </div>
 
-      <!-- Right: User Portrait (Properly cropped without letterbox gaps) -->
-      <div class="md:col-span-5 flex justify-center order-1 md:order-2">
-        <div class="relative group">
-          <div class="absolute inset-0 bg-gradient-to-tr from-cozy-sand via-cozy-sageLight to-cozy-terracottaLight dark:from-night-border dark:via-night-sageBg dark:to-night-terracottaBg rounded-2xl transform rotate-1 group-hover:rotate-0 transition-transform duration-300"></div>
-
-          <div class="relative w-52 sm:w-60 aspect-[472/670] rounded-xl overflow-hidden border-2 border-cozy-cream dark:border-night-card portrait-shadow bg-cozy-sand/30">
-            <img 
-              src="profile.jpg" 
-              alt="Sadiqua Parween - Software Engineering Student" 
-              class="w-full h-full object-cover object-center"
-              loading="eager"
-            />
-          </div>
+      <!-- Right: User Portrait (Cleanly cropped, fills card with no gaps) -->
+      <div class="lg:col-span-4 flex justify-start lg:justify-end">
+        <div class="relative w-48 sm:w-56 aspect-[472/670] rounded-2xl overflow-hidden border border-cozy-border dark:border-night-border shadow-md bg-cozy-sand/30">
+          <img 
+            src="profile.jpg" 
+            alt="Sadiqua Parween" 
+            class="w-full h-full object-cover object-center"
+            loading="eager"
+          />
         </div>
       </div>
 
@@ -219,239 +196,217 @@
 
 
     <!-- ====================================================== -->
-    <!-- 2. A LITTLE IDEA ABOUT ME                              -->
+    <!-- 2. ABOUT ME & WHAT I AIM TO BE                         -->
     <!-- ====================================================== -->
-    <section id="about" class="space-y-5 pt-4 border-t border-cozy-border/60 dark:border-night-border/60">
+    <section id="about" class="w-full grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-cozy-border/70 dark:border-night-border/70">
       
-      <div class="space-y-1">
-        <span class="text-xs uppercase tracking-widest text-cozy-muted dark:text-night-muted font-medium">About Me</span>
-        <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">A Little Idea About Me</h2>
+      <!-- About Card -->
+      <div class="p-6 sm:p-7 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border space-y-3 soft-card">
+        <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-cozy-sage dark:text-night-sage font-medium">
+          <i data-lucide="user" class="w-4 h-4"></i>
+          <span>About Me</span>
+        </div>
+        <h2 class="font-serif text-2xl font-normal text-cozy-charcoal dark:text-night-text">A Little Idea About Me</h2>
+        <p class="text-sm text-cozy-muted dark:text-night-muted leading-relaxed">
+          I am pursuing a B.Tech in Computer Science and AI at Newton School of Technology (S-VYASA University, Bengaluru). I love writing clean, readable code and building software that solves practical everyday problems.
+        </p>
+        <p class="text-sm text-cozy-muted dark:text-night-muted leading-relaxed">
+          Alongside full-stack web development, I actively contribute to the GNOME desktop environment, fixing real bugs in JavaScript, C, and GTK4 that ship to millions of Linux users.
+        </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 text-cozy-muted dark:text-night-muted leading-relaxed text-sm sm:text-base">
-        <div class="md:col-span-7 space-y-3.5">
-          <p>
-            I am a Computer Science &amp; Artificial Intelligence undergraduate at Newton School of Technology (S-VYASA University). I have a deep passion for writing clean, efficient code and solving real-world challenges through software.
-          </p>
-          <p>
-            My engineering work bridges full-stack web applications &mdash; building scalable REST backends and reactive interfaces &mdash; with upstream open-source contributions to core Linux systems like the GNOME desktop environment, addressing UI responsiveness, state synchronization, and IPC.
-          </p>
+      <!-- Aim Card -->
+      <div id="aim" class="p-6 sm:p-7 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border space-y-3 soft-card">
+        <div class="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-cozy-terracotta dark:text-night-terracotta font-medium">
+          <i data-lucide="target" class="w-4 h-4"></i>
+          <span>Aspirations</span>
         </div>
-
-        <div class="md:col-span-5 p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-3 text-xs sm:text-sm">
-          <div class="font-serif text-sm font-medium text-cozy-charcoal dark:text-night-text">Core Philosophy</div>
-          <p class="text-xs text-cozy-muted dark:text-night-muted leading-relaxed">
-            "Passionate about writing clean, efficient code, mastering foundational Data Structures &amp; Algorithms, and solving real-world problems through robust, user-friendly software."
-          </p>
-          <div class="pt-2 border-t border-cozy-border/60 dark:border-night-border/60 space-y-1 text-xs">
-            <div class="flex justify-between text-cozy-charcoal dark:text-night-text">
-              <span class="text-cozy-muted dark:text-night-muted">Current Focus:</span>
-              <span class="font-medium">Full-Stack &amp; Applied AI</span>
-            </div>
-            <div class="flex justify-between text-cozy-charcoal dark:text-night-text">
-              <span class="text-cozy-muted dark:text-night-muted">Open Source:</span>
-              <span class="font-medium text-cozy-sage dark:text-night-sage">GNOME Foundation</span>
-            </div>
-          </div>
-        </div>
+        <h2 class="font-serif text-2xl font-normal text-cozy-charcoal dark:text-night-text">What I Aim to Be</h2>
+        <ul class="text-sm text-cozy-muted dark:text-night-muted space-y-2.5 leading-relaxed">
+          <li class="flex items-start gap-2">
+            <span class="text-cozy-terracotta font-bold">&bull;</span>
+            <span><strong>Full-Stack Engineer:</strong> Build fast, responsive web apps and scalable backends.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-cozy-sage font-bold">&bull;</span>
+            <span><strong>Helpful Problem Solver:</strong> Make useful digital tools that make people's daily work simpler.</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-cozy-charcoal dark:text-night-text font-bold">&bull;</span>
+            <span><strong>Open-Source Builder:</strong> Keep giving back to open-source communities that power the open web.</span>
+          </li>
+        </ul>
       </div>
 
     </section>
 
 
     <!-- ====================================================== -->
-    <!-- 3. WHAT I AIM TO BE                                    -->
+    <!-- 3. OPEN SOURCE EXPERIENCE                              -->
     <!-- ====================================================== -->
-    <section id="aim" class="space-y-5 pt-4 border-t border-cozy-border/60 dark:border-night-border/60">
+    <section id="experience" class="w-full space-y-4 pt-6 border-t border-cozy-border/70 dark:border-night-border/70">
       
-      <div class="space-y-1">
-        <span class="text-xs uppercase tracking-widest text-cozy-muted dark:text-night-muted font-medium">Vision</span>
-        <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">What I Aim to Be</h2>
+      <div class="flex items-center justify-between">
+        <div>
+          <span class="text-xs uppercase tracking-wider text-cozy-muted dark:text-night-muted font-medium font-mono">Work History</span>
+          <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">Open Source Experience</h2>
+        </div>
+        <span class="text-xs font-mono px-3 py-1 rounded-full bg-cozy-sand/60 dark:bg-night-card border border-cozy-border dark:border-night-border">
+          September 2026 &ndash; Present
+        </span>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div class="p-6 sm:p-8 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border space-y-4 soft-card">
         
-        <div class="p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-2.5 soft-card">
-          <div class="w-8 h-8 rounded-lg bg-cozy-sageLight dark:bg-night-sageBg text-cozy-sage dark:text-night-sage flex items-center justify-center">
-            <i data-lucide="layers" class="w-4 h-4"></i>
-          </div>
-          <h3 class="font-serif font-medium text-base text-cozy-charcoal dark:text-night-text">Full-Stack Software Engineer</h3>
-          <p class="text-xs text-cozy-muted dark:text-night-muted leading-relaxed">
-            Aiming to engineer reliable, high-performance web applications and scalable REST APIs using modern stacks, robust database indexing, and clean software architecture.
-          </p>
-        </div>
-
-        <div class="p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-2.5 soft-card">
-          <div class="w-8 h-8 rounded-lg bg-cozy-terracottaLight dark:bg-night-terracottaBg text-cozy-terracotta dark:text-night-terracotta flex items-center justify-center">
-            <i data-lucide="heart" class="w-4 h-4"></i>
-          </div>
-          <h3 class="font-serif font-medium text-base text-cozy-charcoal dark:text-night-text">Impact-Driven Innovator</h3>
-          <p class="text-xs text-cozy-muted dark:text-night-muted leading-relaxed">
-            Building software that directly impacts lives &mdash; such as assistive communication platforms for deaf and mute individuals and resource-sharing ecosystems.
-          </p>
-        </div>
-
-        <div class="p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-2.5 soft-card">
-          <div class="w-8 h-8 rounded-lg bg-cozy-warmAmberLight dark:bg-night-border text-cozy-warmAmber dark:text-night-text flex items-center justify-center">
-            <i data-lucide="git-merge" class="w-4 h-4"></i>
-          </div>
-          <h3 class="font-serif font-medium text-base text-cozy-charcoal dark:text-night-text">Active Open Source Contributor</h3>
-          <p class="text-xs text-cozy-muted dark:text-night-muted leading-relaxed">
-            Continuing to actively contribute upstream to major open-source projects like GNOME, delivering patches that reach and benefit millions of global Linux users.
-          </p>
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ====================================================== -->
-    <!-- 4. OPEN SOURCE EXPERIENCE                              -->
-    <!-- ====================================================== -->
-    <section id="experience" class="space-y-5 pt-4 border-t border-cozy-border/60 dark:border-night-border/60">
-      
-      <div class="space-y-1">
-        <span class="text-xs uppercase tracking-widest text-cozy-muted dark:text-night-muted font-medium">Work &amp; Contributions</span>
-        <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">Open Source Experience</h2>
-      </div>
-
-      <!-- Experience Card: GNOME Foundation -->
-      <article class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 soft-card space-y-3.5">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 border-b border-cozy-border/60 dark:border-night-border/60 pb-3">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-cozy-border/60 dark:border-night-border/60 pb-3">
           <div>
-            <h3 class="font-serif text-lg font-medium text-cozy-charcoal dark:text-night-text flex items-center gap-2">
-              <span>GNOME Foundation</span>
-              <a href="https://gitlab.gnome.org/Sadiqua" target="_blank" rel="noopener noreferrer" class="text-xs text-cozy-sage dark:text-night-sage font-mono hover:underline inline-flex items-center gap-1">
-                <span>(GitLab)</span>
-                <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
-              </a>
+            <h3 class="font-serif text-xl font-medium text-cozy-charcoal dark:text-night-text">
+              GNOME Foundation &bull; Open Source Software Engineer
             </h3>
-            <p class="text-xs text-cozy-terracotta dark:text-night-terracotta font-mono font-medium">
-              Open Source Software Engineer &bull; Remote
-            </p>
+            <span class="text-xs text-cozy-muted dark:text-night-muted font-mono">Remote &bull; GitLab Upstream Contributor</span>
           </div>
-          <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-cozy-sand/60 dark:bg-night-border text-cozy-charcoal dark:text-night-text w-fit">
-            September 2026 &ndash; Present
-          </span>
+          <a href="https://gitlab.gnome.org/Sadiqua" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-cozy-sage dark:text-night-sage hover:underline flex items-center gap-1 w-fit">
+            <span>View GNOME GitLab Profile</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+          </a>
         </div>
 
-        <ul class="text-xs sm:text-sm text-cozy-muted dark:text-night-muted space-y-2 list-disc list-inside leading-relaxed">
-          <li>
-            Merged responsive slider UI alignment into upstream <strong>GNOME Settings (GNOME 52)</strong> using <strong>GTK4</strong> and <strong>Libadwaita</strong>, approved by core maintainers to ship to millions of Linux users.
+        <!-- Clean simple bullet points -->
+        <ul class="text-sm text-cozy-muted dark:text-night-muted space-y-2 leading-relaxed">
+          <li class="flex items-start gap-2">
+            <span class="text-cozy-sage font-bold">&bull;</span>
+            <span>Merged responsive slider UI alignment into upstream <strong>GNOME Settings (GNOME 52)</strong> using <strong>GTK4</strong> and <strong>Libadwaita</strong>, shipping to millions of Linux users.</span>
           </li>
-          <li>
-            Resolved an asynchronous state desynchronization bug in <strong>GNOME Shell (JavaScript/GJS)</strong>, closing <strong>4 open upstream issues</strong> affecting system-wide volume controls.
+          <li class="flex items-start gap-2">
+            <span class="text-cozy-sage font-bold">&bull;</span>
+            <span>Fixed an asynchronous state desynchronization bug in <strong>GNOME Shell (JavaScript/GJS)</strong>, closing <strong>4 open upstream issues</strong> for volume controls.</span>
           </li>
-          <li>
-            Eliminated a multi-second UI freeze in <strong>GNOME Shell</strong> by refactoring asynchronous drag-and-drop state sync during app icon reordering.
+          <li class="flex items-start gap-2">
+            <span class="text-cozy-sage font-bold">&bull;</span>
+            <span>Eliminated multi-second UI freezes in <strong>GNOME Shell</strong> by improving asynchronous drag-and-drop state synchronization during app icon reordering.</span>
           </li>
-          <li>
-            Rectified session state tracking logic in <strong>C and GObject</strong> for GNOME Control Center, preventing improper dismissal of system logout prompts on locale change.
+          <li class="flex items-start gap-2">
+            <span class="text-cozy-sage font-bold">&bull;</span>
+            <span>Fixed session state tracking in <strong>C and GObject</strong> for GNOME Control Center, preventing improper dismissal of logout prompts on locale change.</span>
           </li>
         </ul>
 
-        <div class="flex flex-wrap gap-1.5 pt-1 text-[11px] font-mono">
-          <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">GTK4</span>
-          <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">Libadwaita</span>
-          <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">JavaScript / GJS</span>
-          <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">C</span>
-          <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">GObject</span>
-          <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">GNOME Shell</span>
+        <div class="flex flex-wrap gap-2 pt-2 text-xs font-mono">
+          <span class="px-2.5 py-1 rounded-md bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">GTK4</span>
+          <span class="px-2.5 py-1 rounded-md bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">Libadwaita</span>
+          <span class="px-2.5 py-1 rounded-md bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">JavaScript (GJS)</span>
+          <span class="px-2.5 py-1 rounded-md bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">C</span>
+          <span class="px-2.5 py-1 rounded-md bg-cozy-sand/50 dark:bg-night-border text-cozy-charcoal dark:text-night-text">GObject</span>
         </div>
-      </article>
+
+      </div>
 
     </section>
 
 
     <!-- ====================================================== -->
-    <!-- 5. PROJECTS (FROM RESUME)                              -->
+    <!-- 4. PROJECTS                                            -->
     <!-- ====================================================== -->
-    <section id="projects" class="space-y-5 pt-4 border-t border-cozy-border/60 dark:border-night-border/60">
+    <section id="projects" class="w-full space-y-4 pt-6 border-t border-cozy-border/70 dark:border-night-border/70">
       
-      <div class="space-y-1">
-        <span class="text-xs uppercase tracking-widest text-cozy-muted dark:text-night-muted font-medium">Featured Work</span>
-        <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">Projects I've Built</h2>
-        <p class="text-xs sm:text-sm text-cozy-muted dark:text-night-muted">Directly verified engineering systems from my resume.</p>
+      <div>
+        <span class="text-xs uppercase tracking-wider text-cozy-muted dark:text-night-muted font-medium font-mono">Selected Work</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">Projects</h2>
       </div>
 
-      <div class="space-y-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         
         <!-- Project 1: Rentu -->
-        <article class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 soft-card space-y-3.5">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-cozy-border/60 dark:border-night-border/60 pb-3">
-            <div>
-              <h3 class="font-serif text-xl font-medium text-cozy-charcoal dark:text-night-text flex items-center gap-2">
-                <span>Rentu &mdash; Peer-to-Peer Resource Platform</span>
-              </h3>
-              <span class="text-xs font-mono text-cozy-terracotta dark:text-night-terracotta">October 2026</span>
-            </div>
-            <div class="flex items-center gap-3 text-xs font-medium">
-              <a href="https://github.com/Sadiqua-Parween/Rentu" target="_blank" rel="noopener noreferrer" class="text-cozy-muted hover:text-cozy-terracotta dark:hover:text-night-terracotta inline-flex items-center gap-1 transition-colors">
+        <article class="p-6 sm:p-7 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border space-y-3.5 soft-card flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-cozy-terracottaLight dark:bg-night-border text-cozy-terracotta font-medium">October 2026</span>
+              <a href="https://github.com/Sadiqua-Parween/Rentu" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-cozy-muted hover:text-cozy-terracotta inline-flex items-center gap-1">
                 <span>GitHub</span>
                 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
               </a>
             </div>
+
+            <h3 class="font-serif text-xl font-medium text-cozy-charcoal dark:text-night-text">
+              Rentu &mdash; Peer-to-Peer Rental Platform
+            </h3>
+
+            <p class="text-xs font-mono text-cozy-muted dark:text-night-muted">
+              <strong>Stack:</strong> React.js, Node.js, Express.js, MongoDB, JWT, Cloudinary, Vercel/Render
+            </p>
+
+            <ul class="text-xs sm:text-sm text-cozy-muted dark:text-night-muted space-y-1.5 leading-relaxed">
+              <li class="flex items-start gap-2">
+                <span class="text-cozy-terracotta font-bold">&bull;</span>
+                <span>Allows students to share and rent high-value campus items (calculators, cameras, books) instead of buying them.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cozy-terracotta font-bold">&bull;</span>
+                <span>Designed a collision algorithm that prevents double-booking when multiple users check out simultaneously.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cozy-terracotta font-bold">&bull;</span>
+                <span>Optimized MongoDB queries with compound indexing, dropping search latency from 380ms to under 75ms.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cozy-terracotta font-bold">&bull;</span>
+                <span>Integrated Cloudinary for image uploads and deployed the live application.</span>
+              </li>
+            </ul>
           </div>
 
-          <div class="text-xs font-mono text-cozy-muted dark:text-night-muted">
-            <strong class="text-cozy-charcoal dark:text-night-text font-medium">Tech Stack:</strong> React.js, Node.js, Express.js, MongoDB, JWT, Cloudinary, Vercel/Render
-          </div>
-
-          <ul class="text-xs sm:text-sm text-cozy-muted dark:text-night-muted space-y-1.5 list-disc list-inside leading-relaxed">
-            <li>Developed and deployed a peer-to-peer asset sharing platform to solve campus resource underutilization, enabling students to list, discover, and rent high-value items (calculators, cameras, books) instead of purchasing them.</li>
-            <li>Solved the concurrent booking race condition by designing a <strong>transactional date-interval collision algorithm</strong> that prevents double-booking across simultaneous checkout requests.</li>
-            <li>Optimized multi-attribute search (price, location, category) by implementing compound indexing in MongoDB, reducing query latency from 380ms to <strong>under 75ms</strong> under simulated concurrent load.</li>
-            <li>Engineered the full-stack architecture end-to-end, integrated Cloudinary for optimized media pipelines, and deployed the live application.</li>
-          </ul>
-
-          <div class="flex flex-wrap items-center gap-1.5 pt-1 text-[11px] font-mono text-cozy-muted dark:text-night-muted">
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">React.js</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">Node.js</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">Express.js</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">MongoDB</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">JWT</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">Cloudinary</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">Vercel / Render</span>
+          <div class="pt-3 border-t border-cozy-border/60 dark:border-night-border/60 flex flex-wrap gap-1.5 text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border">React.js</span>
+            <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border">Node.js</span>
+            <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border">Express</span>
+            <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border">MongoDB</span>
           </div>
         </article>
 
         <!-- Project 2: Setu -->
-        <article class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 soft-card space-y-3.5">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-cozy-border/60 dark:border-night-border/60 pb-3">
-            <div>
-              <h3 class="font-serif text-xl font-medium text-cozy-charcoal dark:text-night-text flex items-center gap-2">
-                <span>Setu &mdash; Bidirectional Sign Language &amp; Speech Communication System</span>
-              </h3>
-              <span class="text-xs font-mono text-cozy-sage dark:text-night-sage">September 2026</span>
-            </div>
-            <div class="flex items-center gap-3 text-xs font-medium">
-              <a href="https://github.com/Sadiqua-Parween" target="_blank" rel="noopener noreferrer" class="text-cozy-muted hover:text-cozy-terracotta dark:hover:text-night-terracotta inline-flex items-center gap-1 transition-colors">
+        <article class="p-6 sm:p-7 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border space-y-3.5 soft-card flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono px-2.5 py-0.5 rounded-full bg-cozy-sageLight dark:bg-night-border text-cozy-sage font-medium">September 2026</span>
+              <a href="https://github.com/Sadiqua-Parween" target="_blank" rel="noopener noreferrer" class="text-xs font-medium text-cozy-muted hover:text-cozy-sage inline-flex items-center gap-1">
                 <span>GitHub</span>
                 <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
               </a>
             </div>
+
+            <h3 class="font-serif text-xl font-medium text-cozy-charcoal dark:text-night-text">
+              Setu &mdash; Sign Language &amp; Speech Translator
+            </h3>
+
+            <p class="text-xs font-mono text-cozy-muted dark:text-night-muted">
+              <strong>Stack:</strong> Python, OpenCV, MediaPipe, TensorFlow / PyTorch, React.js, FastAPI, Web Speech API
+            </p>
+
+            <ul class="text-xs sm:text-sm text-cozy-muted dark:text-night-muted space-y-1.5 leading-relaxed">
+              <li class="flex items-start gap-2">
+                <span class="text-cozy-sage font-bold">&bull;</span>
+                <span>Translates sign language into speech, and spoken voice into visual signs in real-time.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cozy-sage font-bold">&bull;</span>
+                <span>Trained gesture models using MediaPipe hand landmarks, reaching 94% accuracy over 30+ sign gestures.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cozy-sage font-bold">&bull;</span>
+                <span>Used multithreaded OpenCV loops for smooth 30+ FPS video processing with sub-80ms response speed.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cozy-sage font-bold">&bull;</span>
+                <span>Added Web Speech API and dynamic avatar animations to display continuous sign sequences.</span>
+              </li>
+            </ul>
           </div>
 
-          <div class="text-xs font-mono text-cozy-muted dark:text-night-muted">
-            <strong class="text-cozy-charcoal dark:text-night-text font-medium">Tech Stack:</strong> Python, OpenCV, MediaPipe, TensorFlow / PyTorch, React.js, FastAPI, Web Speech API
-          </div>
-
-          <ul class="text-xs sm:text-sm text-cozy-muted dark:text-night-muted space-y-1.5 list-disc list-inside leading-relaxed">
-            <li>Engineered a real-time assistive communication platform bridging the gap for deaf and mute individuals via bidirectional Sign-to-Speech and Text-to-Sign conversion.</li>
-            <li>Trained a gesture classification pipeline using MediaPipe hand landmarks and deep learning, achieving <strong>94% recognition accuracy</strong> across 30+ static and dynamic sign gestures.</li>
-            <li>Optimized computer vision inference loops using OpenCV multi-threading, sustaining smooth <strong>30+ FPS processing</strong> on low-power client hardware with sub-80ms translation latency.</li>
-            <li>Integrated the Web Speech API and dynamic avatar animations to convert spoken/text inputs into continuous visual sign sequences in real time.</li>
-          </ul>
-
-          <div class="flex flex-wrap items-center gap-1.5 pt-1 text-[11px] font-mono text-cozy-muted dark:text-night-muted">
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">Python</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">OpenCV</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">MediaPipe</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">TensorFlow / PyTorch</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">React.js</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">FastAPI</span>
-            <span class="px-2.5 py-0.5 rounded-md bg-cozy-sand/50 dark:bg-night-border">Web Speech API</span>
+          <div class="pt-3 border-t border-cozy-border/60 dark:border-night-border/60 flex flex-wrap gap-1.5 text-[11px] font-mono">
+            <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border">Python</span>
+            <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border">OpenCV</span>
+            <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border">MediaPipe</span>
+            <span class="px-2 py-0.5 rounded bg-cozy-sand/50 dark:bg-night-border">FastAPI</span>
           </div>
         </article>
 
@@ -461,198 +416,166 @@
 
 
     <!-- ====================================================== -->
-    <!-- 6. EDUCATION (FROM RESUME)                             -->
+    <!-- 5. EDUCATION & SKILLS (SIDE BY SIDE WIDE GRID)         -->
     <!-- ====================================================== -->
-    <section id="education" class="space-y-5 pt-4 border-t border-cozy-border/60 dark:border-night-border/60">
+    <section class="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 pt-6 border-t border-cozy-border/70 dark:border-night-border/70">
       
-      <div class="space-y-1">
-        <span class="text-xs uppercase tracking-widest text-cozy-muted dark:text-night-muted font-medium">Academic Records</span>
-        <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">Education</h2>
-      </div>
-
-      <div class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-4">
-        
-        <div class="overflow-x-auto">
-          <table class="w-full text-left text-xs sm:text-sm">
-            <thead>
-              <tr class="border-b border-cozy-border/80 dark:border-night-border/80 text-cozy-muted dark:text-night-muted font-mono text-xs">
-                <th class="pb-2.5 font-medium">Year</th>
-                <th class="pb-2.5 font-medium">Degree / Exam</th>
-                <th class="pb-2.5 font-medium">Institute</th>
-                <th class="pb-2.5 font-medium text-right">CGPA / Marks</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-cozy-border/50 dark:divide-night-border/50">
-              <tr class="text-cozy-charcoal dark:text-night-text">
-                <td class="py-3 font-mono text-xs text-cozy-terracotta dark:text-night-terracotta font-semibold">2025 &ndash; 2029</td>
-                <td class="py-3 font-medium">Bachelor of Technology (Computer Science and AI)</td>
-                <td class="py-3 text-cozy-muted dark:text-night-muted">Newton School of Technology, S-VYASA University</td>
-                <td class="py-3 text-right font-mono font-bold text-cozy-sage dark:text-night-sage">7.57 / 10.0</td>
-              </tr>
-              <tr class="text-cozy-charcoal dark:text-night-text">
-                <td class="py-3 font-mono text-xs">2022 &ndash; 2024</td>
-                <td class="py-3">Intermediate (Class XII)</td>
-                <td class="py-3 text-cozy-muted dark:text-night-muted">Sacred Heart Convent</td>
-                <td class="py-3 text-right font-mono font-semibold">84.0%</td>
-              </tr>
-              <tr class="text-cozy-charcoal dark:text-night-text">
-                <td class="py-3 font-mono text-xs">2021 &ndash; 2022</td>
-                <td class="py-3">Matriculation (Class X)</td>
-                <td class="py-3 text-cozy-muted dark:text-night-muted">Tagore Academy</td>
-                <td class="py-3 text-right font-mono font-semibold">86.0%</td>
-              </tr>
-            </tbody>
-          </table>
+      <!-- Left: Education -->
+      <div id="education" class="lg:col-span-6 space-y-4">
+        <div>
+          <span class="text-xs uppercase tracking-wider text-cozy-muted dark:text-night-muted font-medium font-mono">Academic Track</span>
+          <h2 class="font-serif text-2xl font-normal tracking-tight">Education</h2>
         </div>
 
+        <div class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border space-y-4">
+          <div class="space-y-1">
+            <div class="flex justify-between items-baseline text-xs font-mono">
+              <span class="text-cozy-terracotta font-semibold">2025 &ndash; 2029</span>
+              <span class="font-bold text-cozy-sage dark:text-night-sage">CGPA: 7.57 / 10.0</span>
+            </div>
+            <h3 class="font-serif text-base font-medium text-cozy-charcoal dark:text-night-text">
+              Bachelor of Technology (Computer Science and AI)
+            </h3>
+            <p class="text-xs text-cozy-muted dark:text-night-muted">
+              Newton School of Technology, S-VYASA University &bull; Bengaluru
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-cozy-border/60 dark:border-night-border/60 space-y-1">
+            <div class="flex justify-between items-baseline text-xs font-mono">
+              <span>2022 &ndash; 2024</span>
+              <span class="font-semibold">84.0%</span>
+            </div>
+            <h4 class="text-sm font-medium text-cozy-charcoal dark:text-night-text">Intermediate (Class XII)</h4>
+            <p class="text-xs text-cozy-muted dark:text-night-muted">Sacred Heart Convent</p>
+          </div>
+
+          <div class="pt-3 border-t border-cozy-border/60 dark:border-night-border/60 space-y-1">
+            <div class="flex justify-between items-baseline text-xs font-mono">
+              <span>2021 &ndash; 2022</span>
+              <span class="font-semibold">86.0%</span>
+            </div>
+            <h4 class="text-sm font-medium text-cozy-charcoal dark:text-night-text">Matriculation (Class X)</h4>
+            <p class="text-xs text-cozy-muted dark:text-night-muted">Tagore Academy</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Technical Skills -->
+      <div id="skills" class="lg:col-span-6 space-y-4">
+        <div>
+          <span class="text-xs uppercase tracking-wider text-cozy-muted dark:text-night-muted font-medium font-mono">Toolkit</span>
+          <h2 class="font-serif text-2xl font-normal tracking-tight">Technical Skills</h2>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border space-y-4 text-xs font-mono">
+          <div>
+            <span class="text-cozy-terracotta dark:text-night-terracotta font-sans text-sm font-semibold">Computer Languages</span>
+            <p class="text-cozy-muted dark:text-night-muted mt-1 leading-relaxed">
+              JavaScript, Python, Java
+            </p>
+          </div>
+
+          <div class="pt-2 border-t border-cozy-border/60 dark:border-night-border/60">
+            <span class="text-cozy-sage dark:text-night-sage font-sans text-sm font-semibold">Frameworks &amp; Libraries</span>
+            <p class="text-cozy-muted dark:text-night-muted mt-1 leading-relaxed">
+              React, Node.js, Express JS, Tailwind CSS, FastAPI
+            </p>
+          </div>
+
+          <div class="pt-2 border-t border-cozy-border/60 dark:border-night-border/60">
+            <span class="text-cozy-charcoal dark:text-night-text font-sans text-sm font-semibold">Databases &amp; Tools</span>
+            <p class="text-cozy-muted dark:text-night-muted mt-1 leading-relaxed">
+              PostgreSQL, MongoDB, Git and GitHub, Docker
+            </p>
+          </div>
+
+          <div class="pt-2 border-t border-cozy-border/60 dark:border-night-border/60">
+            <span class="text-cozy-muted font-sans text-sm font-semibold">Coursework</span>
+            <p class="text-cozy-muted dark:text-night-muted mt-1">
+              Data Structures and Algorithms
+            </p>
+          </div>
+        </div>
       </div>
 
     </section>
 
 
     <!-- ====================================================== -->
-    <!-- 7. SKILLS (EXACTLY FROM RESUME)                        -->
+    <!-- 6. CONTACT (WIDE FULL-SPACE LAYOUT)                    -->
     <!-- ====================================================== -->
-    <section id="skills" class="space-y-5 pt-4 border-t border-cozy-border/60 dark:border-night-border/60">
+    <section id="contact" class="w-full space-y-6 pt-6 border-t border-cozy-border/70 dark:border-night-border/70">
       
-      <div class="space-y-1">
-        <span class="text-xs uppercase tracking-widest text-cozy-muted dark:text-night-muted font-medium">Competencies</span>
-        <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">Technical Skills</h2>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
-        
-        <div class="p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-2">
-          <span class="text-cozy-terracotta dark:text-night-terracotta font-semibold font-sans text-sm">Computer Languages</span>
-          <p class="text-cozy-muted dark:text-night-muted leading-relaxed">
-            JavaScript, Python, Java
-          </p>
-        </div>
-
-        <div class="p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-2">
-          <span class="text-cozy-sage dark:text-night-sage font-semibold font-sans text-sm">Frameworks &amp; Libraries</span>
-          <p class="text-cozy-muted dark:text-night-muted leading-relaxed">
-            React, Node.js, Express JS, Tailwind CSS, FastAPI
-          </p>
-        </div>
-
-        <div class="p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-2">
-          <span class="text-cozy-warmAmber dark:text-night-text font-semibold font-sans text-sm">Databases &amp; Data Tools</span>
-          <p class="text-cozy-muted dark:text-night-muted leading-relaxed">
-            PostgreSQL, MongoDB
-          </p>
-        </div>
-
-        <div class="p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-2">
-          <span class="text-cozy-charcoal dark:text-night-text font-semibold font-sans text-sm">Courses &amp; Tools</span>
-          <p class="text-cozy-muted dark:text-night-muted leading-relaxed">
-            <strong>Courses:</strong> Data Structures and Algorithms<br>
-            <strong>Version Control / Tools:</strong> Git and Github, Docker
-          </p>
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ====================================================== -->
-    <!-- 8. CONTACT & IN-BROWSER BACKEND DISPATCH               -->
-    <!-- ====================================================== -->
-    <section id="contact" class="space-y-6 pt-4 border-t border-cozy-border/60 dark:border-night-border/60">
-      
-      <div class="space-y-1">
-        <span class="text-xs uppercase tracking-widest text-cozy-muted dark:text-night-muted font-medium">Get In Touch</span>
-        <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">Contact Sadiqua</h2>
-        <p class="text-cozy-muted dark:text-night-muted text-sm sm:text-base leading-relaxed max-w-xl">
-          Interested in discussing a software engineering role, project, or open-source collaboration? Feel free to reach out directly.
+      <div>
+        <span class="text-xs uppercase tracking-wider text-cozy-muted dark:text-night-muted font-medium font-mono">Reach Out</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">Contact</h2>
+        <p class="text-sm text-cozy-muted dark:text-night-muted mt-1">
+          Have an opportunity or question? Feel free to reach out directly or send a message below.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        <!-- Verified Contact Details from Resume -->
-        <div class="md:col-span-5 space-y-4">
-          <div class="p-5 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80 space-y-4 text-xs sm:text-sm">
-            
-            <div class="space-y-1">
-              <span class="text-[11px] font-mono text-cozy-muted dark:text-night-muted">Email</span>
-              <div>
-                <a href="mailto:falaksadiqua786@gmail.com" class="font-medium text-cozy-charcoal dark:text-night-text hover:text-cozy-terracotta dark:hover:text-night-terracotta transition-colors">
-                  falaksadiqua786@gmail.com
-                </a>
-              </div>
-            </div>
-
-            <div class="space-y-1">
-              <span class="text-[11px] font-mono text-cozy-muted dark:text-night-muted">Phone</span>
-              <div class="font-medium text-cozy-charcoal dark:text-night-text">
-                <a href="tel:+919508021556" class="hover:underline">+91 9508021556</a>
-              </div>
-            </div>
-
-            <div class="space-y-1">
-              <span class="text-[11px] font-mono text-cozy-muted dark:text-night-muted">Profiles</span>
-              <div class="flex flex-col gap-1.5 font-medium text-xs pt-0.5">
-                <a href="https://github.com/Sadiqua-Parween" target="_blank" rel="noopener noreferrer" class="text-cozy-terracotta dark:text-night-terracotta hover:underline inline-flex items-center gap-1.5">
-                  <i data-lucide="github" class="w-3.5 h-3.5"></i>
-                  <span>github.com/Sadiqua-Parween</span>
-                </a>
-                <a href="https://gitlab.gnome.org/Sadiqua" target="_blank" rel="noopener noreferrer" class="text-cozy-sage dark:text-night-sage hover:underline inline-flex items-center gap-1.5">
-                  <i data-lucide="git-merge" class="w-3.5 h-3.5"></i>
-                  <span>gitlab.gnome.org/Sadiqua</span>
-                </a>
-                <a href="https://www.linkedin.com/in/sadiquaparween/" target="_blank" rel="noopener noreferrer" class="text-cozy-warmAmber dark:text-night-text hover:underline inline-flex items-center gap-1.5">
-                  <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
-                  <span>linkedin.com/in/sadiquaparween</span>
-                </a>
-              </div>
-            </div>
-
+        <!-- Quick Info Box -->
+        <div class="lg:col-span-5 p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border space-y-4 text-sm">
+          <div>
+            <span class="text-xs font-mono text-cozy-muted">Email</span>
+            <p class="mt-0.5">
+              <a href="mailto:falaksadiqua786@gmail.com" class="font-medium text-cozy-charcoal dark:text-night-text hover:text-cozy-terracotta">
+                falaksadiqua786@gmail.com
+              </a>
+            </p>
           </div>
 
-          <div class="p-4 rounded-xl bg-cozy-sand/40 dark:bg-night-card/50 border border-cozy-border/60 dark:border-night-border/60 text-xs text-cozy-muted dark:text-night-muted space-y-1">
-            <div class="font-medium text-cozy-charcoal dark:text-night-text flex items-center gap-1.5">
-              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-cozy-sage dark:text-night-sage"></i>
-              <span>Self-Contained Backend Storage</span>
+          <div>
+            <span class="text-xs font-mono text-cozy-muted">Phone</span>
+            <p class="mt-0.5">
+              <a href="tel:+919508021556" class="font-medium text-cozy-charcoal dark:text-night-text hover:underline">
+                +91 9508021556
+              </a>
+            </p>
+          </div>
+
+          <div>
+            <span class="text-xs font-mono text-cozy-muted">Links</span>
+            <div class="flex items-center gap-3 font-medium text-xs mt-1">
+              <a href="https://github.com/Sadiqua-Parween" target="_blank" class="text-cozy-terracotta hover:underline">GitHub</a>
+              <span>&bull;</span>
+              <a href="https://gitlab.gnome.org/Sadiqua" target="_blank" class="text-cozy-sage hover:underline">GNOME GitLab</a>
+              <span>&bull;</span>
+              <a href="https://www.linkedin.com/in/sadiquaparween/" target="_blank" class="text-cozy-charcoal dark:text-night-text hover:underline">LinkedIn</a>
             </div>
-            <p>Submissions are safely validated and stored right in this page's local storage with instant acknowledgment.</p>
           </div>
         </div>
 
         <!-- Contact Form -->
-        <div class="md:col-span-7 p-6 sm:p-7 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border/80 dark:border-night-border/80">
+        <div class="lg:col-span-7 p-6 sm:p-7 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border">
           <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4 text-sm">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="space-y-1">
-                <label class="block text-xs font-medium text-cozy-charcoal dark:text-night-text">Your Name *</label>
-                <input type="text" id="senderName" required placeholder="Alex Rivera" class="w-full px-3.5 py-2.5 rounded-xl bg-cozy-cream/60 dark:bg-night-bg/60 border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text placeholder-cozy-muted/60 dark:placeholder-night-muted/50 focus:outline-none focus:border-cozy-sage dark:focus:border-night-sage text-sm">
+              <div>
+                <label class="block text-xs font-medium text-cozy-charcoal dark:text-night-text mb-1">Your Name</label>
+                <input type="text" id="senderName" required placeholder="Name" class="w-full px-3.5 py-2.5 rounded-xl bg-cozy-cream/60 dark:bg-night-bg border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text text-sm focus:outline-none focus:border-cozy-sage">
               </div>
-              <div class="space-y-1">
-                <label class="block text-xs font-medium text-cozy-charcoal dark:text-night-text">Your Email *</label>
-                <input type="email" id="senderEmail" required placeholder="alex@company.com" class="w-full px-3.5 py-2.5 rounded-xl bg-cozy-cream/60 dark:bg-night-bg/60 border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text placeholder-cozy-muted/60 dark:placeholder-night-muted/50 focus:outline-none focus:border-cozy-sage dark:focus:border-night-sage text-sm">
+              <div>
+                <label class="block text-xs font-medium text-cozy-charcoal dark:text-night-text mb-1">Your Email</label>
+                <input type="email" id="senderEmail" required placeholder="Email" class="w-full px-3.5 py-2.5 rounded-xl bg-cozy-cream/60 dark:bg-night-bg border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text text-sm focus:outline-none focus:border-cozy-sage">
               </div>
             </div>
 
-            <div class="space-y-1">
-              <label class="block text-xs font-medium text-cozy-charcoal dark:text-night-text">Subject *</label>
-              <input type="text" id="senderSubject" required placeholder="Software Engineering Opportunity / Project Discussion" class="w-full px-3.5 py-2.5 rounded-xl bg-cozy-cream/60 dark:bg-night-bg/60 border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text placeholder-cozy-muted/60 dark:placeholder-night-muted/50 focus:outline-none focus:border-cozy-sage dark:focus:border-night-sage text-sm">
+            <div>
+              <label class="block text-xs font-medium text-cozy-charcoal dark:text-night-text mb-1">Message</label>
+              <textarea id="senderMessage" required rows="3" placeholder="Write your message here..." class="w-full px-3.5 py-2.5 rounded-xl bg-cozy-cream/60 dark:bg-night-bg border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text text-sm focus:outline-none focus:border-cozy-sage"></textarea>
             </div>
 
-            <div class="space-y-1">
-              <label class="block text-xs font-medium text-cozy-charcoal dark:text-night-text">Message *</label>
-              <textarea id="senderMessage" required rows="4" placeholder="Hello Sadiqua, I came across your portfolio and GNOME contributions..." class="w-full px-3.5 py-2.5 rounded-xl bg-cozy-cream/60 dark:bg-night-bg/60 border border-cozy-border dark:border-night-border text-cozy-charcoal dark:text-night-text placeholder-cozy-muted/60 dark:placeholder-night-muted/50 focus:outline-none focus:border-cozy-sage dark:focus:border-night-sage text-sm"></textarea>
-            </div>
-
-            <button type="submit" id="submitBtn" class="px-6 py-2.5 rounded-full bg-cozy-charcoal text-cozy-cream dark:bg-night-text dark:text-night-bg font-medium text-xs hover:opacity-90 transition-opacity flex items-center justify-center gap-1.5">
+            <button type="submit" id="submitBtn" class="px-6 py-2.5 rounded-full bg-cozy-charcoal text-cozy-cream dark:bg-night-text dark:text-night-bg font-medium text-xs hover:opacity-90 transition-opacity flex items-center gap-1.5">
               <span>Send Message</span>
               <i data-lucide="send" class="w-3.5 h-3.5"></i>
             </button>
           </form>
 
-          <div id="formSuccessAlert" class="hidden mt-4 p-3.5 rounded-xl bg-cozy-sageLight dark:bg-night-sageBg border border-cozy-sage/40 dark:border-night-sage/40 text-xs text-cozy-sage dark:text-night-sage space-y-0.5">
-            <div class="font-medium">Thank you! Your message has been received.</div>
-            <p class="text-cozy-muted dark:text-night-muted text-[11px]">Recorded in local storage. Sadiqua will review and get back to you promptly!</p>
+          <div id="formSuccessAlert" class="hidden mt-3 p-3 rounded-xl bg-cozy-sageLight dark:bg-night-sageBg text-xs text-cozy-sage dark:text-night-sage">
+            Thank you! Your message has been saved in local storage.
           </div>
         </div>
 
@@ -664,31 +587,29 @@
 
 
   <!-- ======================================================== -->
-  <!-- FOOTER                                                   -->
+  <!-- FULL-WIDTH FOOTER                                        -->
   <!-- ======================================================== -->
-  <footer class="border-t border-cozy-border/60 dark:border-night-border/60 mt-16 py-8 text-xs text-cozy-muted dark:text-night-muted">
-    <div class="max-w-4xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div class="flex items-center gap-2">
-        <span>&copy; <span id="year">2026</span> Sadiqua Parween</span>
-        <span>&bull;</span>
-        <span>Newton School of Technology, S-VYASA University</span>
+  <footer class="w-full border-t border-cozy-border/70 dark:border-night-border/70 mt-12 py-6 px-5 sm:px-10 lg:px-16 text-xs text-cozy-muted dark:text-night-muted">
+    <div class="w-full flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div>
+        &copy; <span id="year">2026</span> Sadiqua Parween &bull; Newton School of Technology (S-VYASA)
       </div>
       <div class="flex items-center gap-4">
-        <a href="https://github.com/Sadiqua-Parween" target="_blank" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">GitHub</a>
-        <a href="https://gitlab.gnome.org/Sadiqua" target="_blank" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">GitLab</a>
-        <a href="https://www.linkedin.com/in/sadiquaparween/" target="_blank" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">LinkedIn</a>
-        <a href="#" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Top &uarr;</a>
+        <a href="https://github.com/Sadiqua-Parween" target="_blank" class="hover:underline">GitHub</a>
+        <a href="https://gitlab.gnome.org/Sadiqua" target="_blank" class="hover:underline">GNOME GitLab</a>
+        <a href="https://www.linkedin.com/in/sadiquaparween/" target="_blank" class="hover:underline">LinkedIn</a>
+        <a href="#" class="hover:underline">Top &uarr;</a>
       </div>
     </div>
   </footer>
 
 
   <!-- ======================================================== -->
-  <!-- IN-BROWSER BACKEND CONTROLLER (JAVASCRIPT)               -->
+  <!-- IN-BROWSER BACKEND CONTROLLER                            -->
   <!-- ======================================================== -->
   <script>
     const LocalBackend = (function() {
-      const STORAGE_KEY = 'sadiqua_accurate_resume_msgs_v2';
+      const STORAGE_KEY = 'sadiqua_simple_portfolio_msgs';
 
       function loadMessages() {
         try {
@@ -708,20 +629,18 @@
 
       return {
         dispatchContact: async function(data) {
-          await new Promise(r => setTimeout(r, 25));
+          await new Promise(r => setTimeout(r, 20));
           const entry = {
             id: Date.now(),
             name: data.name.trim(),
             email: data.email.trim(),
-            subject: data.subject.trim(),
             message: data.message.trim(),
             timestamp: new Date().toISOString()
           };
           messages.unshift(entry);
           saveMessages(messages);
           return { status: 201, data: entry };
-        },
-        getMessages: () => messages
+        }
       };
     })();
 
@@ -730,23 +649,22 @@
       const btn = document.getElementById('submitBtn');
       const name = document.getElementById('senderName').value;
       const email = document.getElementById('senderEmail').value;
-      const subject = document.getElementById('senderSubject').value;
       const message = document.getElementById('senderMessage').value;
 
       btn.disabled = true;
       btn.innerHTML = `<span>Sending...</span>`;
 
-      const response = await LocalBackend.dispatchContact({ name, email, subject, message });
+      const res = await LocalBackend.dispatchContact({ name, email, message });
 
       btn.disabled = false;
       btn.innerHTML = `<span>Send Message</span><i data-lucide="send" class="w-3.5 h-3.5"></i>`;
       if (window.lucide) lucide.createIcons();
 
-      if (response.status === 201) {
+      if (res.status === 201) {
         document.getElementById('contactForm').reset();
         const alertBox = document.getElementById('formSuccessAlert');
         alertBox.classList.remove('hidden');
-        setTimeout(() => alertBox.classList.add('hidden'), 6000);
+        setTimeout(() => alertBox.classList.add('hidden'), 5000);
       }
     }
 
