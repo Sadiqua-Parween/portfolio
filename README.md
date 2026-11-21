@@ -1,35 +1,24 @@
-# ⚔️ Swordigo: Chronicles of Sadiqua | The Full-Stack Quest
+# Sadiqua Parween &bull; Portfolio
 
-> A Swordigo-inspired action-adventure RPG portfolio of **Sadiqua Parween** (Full-Stack Software Engineer & Code Sorceress).
-> Everything—including the playable 2D adventure canvas game, Web Audio synthesizer, frontend RPG codex, and in-browser micro-backend with LocalStorage database—is 100% self-contained in a single page (`index.html`).
+> A simple, minimalist, and cozy personal portfolio for **Sadiqua Parween** (Software Engineer & Builder).
+> Designed with soft, soothing colors (warm cream, soft sage, muted terracotta), clean typography, and a self-contained single-page architecture where the frontend, content, and in-memory backend logic live in `index.html`.
 
-## 🎮 Game Features (Swordigo Style)
+## 🌿 Sections
 
-- **Playable 2D Platformer Realm**:
-  - Run, jump, and climb across floating dungeon platforms.
-  - Slay corrupted bugs (`404_Bug`, `Memory_Leak`, `Null_Pointer`, `Race_Condition`) using the glowing **Mage Blade** (`[J]`) or casting **Magic Bolts** (`[K]`).
-  - Smash treasure chests to reveal project relics and collect **Code Shards** (💎).
-  - Web Audio API synthesizer for retro-fantasy sound effects (sword slash, magic chime, bug hit, chest fanfare) with zero external audio assets!
-  - Mobile touch controller (virtual D-pad + Jump + Attack + Magic).
-- **RPG HUD (Heads-Up Display)**:
-  - Level 24 Code Sorceress profile.
-  - Health Hearts (`❤️❤️❤️❤️❤️`) and live regenerative Mana Bar (`MP`).
-  - Live Shard & XP counters updated dynamically during gameplay.
-- **The Spellbook (Skills)**:
-  - Interactive skill tree categorized by Frontend Runes, Backend Alchemy, Database Vaults, and DevOps Wards.
-- **Quest Log (Projects)**:
-  - Real-world production projects presented as epic conquered quests with rewards, tech stacks, and source links.
-- **Adventurer's Tavern Ledger (Guestbook)**:
-  - Visitors can permanently inscribe their name and message onto an ancient stone tablet saved into the local backend DB.
-- **Raven Summoning Circle (Contact)**:
-  - RPG-themed dispatch form routing inquiries to the internal backend inbox.
-- **Game Master Console (DevTools)**:
-  - In-browser REST API route inspector (`/api/quests`, `/api/skills`, `/api/tavern`, `/api/messages`).
-  - LocalStorage database viewer and God Mode cheats (infinite shards, heal hearts, spawn chests).
+- **Introduction**: Profile portrait, gentle greeting, and core focus areas.
+- **A Little About Me**: Background in full-stack software development, engineering philosophy, and technical tools.
+- **What I Aim to Be**: Vision as a thoughtful architect, human-centered builder, and lifelong craftsman.
+- **Selected Projects**:
+  - **CloudVault**: End-to-end encrypted distributed cloud storage.
+  - **PulseMetrics**: Sub-15ms real-time API telemetry monitor.
+  - **NexusUI**: Accessible, calm design system for web applications.
+  - **TaskFlow**: Distraction-free collaborative workspace.
+- **Contact**: Thoughtful message form with an in-browser storage dispatcher, plus direct links.
+- **Theme**: Calming Day mode (warm cream) and Calm Evening mode (cozy dark).
 
-## 🚀 How to Play & View
+## ☕ Running Locally
 
-Open `index.html` in any web browser:
+Simply open `index.html` in your web browser:
 
 ```bash
 # macOS
