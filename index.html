@@ -110,8 +110,8 @@
         <a href="#aim" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Goals</a>
         <a href="#experience" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Experience</a>
         <a href="#projects" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Projects</a>
-        <a href="#education" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Education</a>
         <a href="#skills" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Skills</a>
+        <a href="#education" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Education</a>
         <a href="#contact" class="hover:text-cozy-charcoal dark:hover:text-night-text transition-colors">Contact</a>
       </nav>
 
@@ -416,94 +416,136 @@
 
 
     <!-- ====================================================== -->
-    <!-- 5. EDUCATION & SKILLS (SIDE BY SIDE WIDE GRID)         -->
+    <!-- 5. SKILLS (EXCLUSIVELY FROM RESUME SKILLS SECTION)     -->
     <!-- ====================================================== -->
-    <section class="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 pt-6 border-t border-cozy-border/70 dark:border-night-border/70">
+    <section id="skills" class="w-full space-y-5 pt-6 border-t border-cozy-border/70 dark:border-night-border/70">
       
-      <!-- Left: Education -->
-      <div id="education" class="lg:col-span-6 space-y-4">
-        <div>
-          <span class="text-xs uppercase tracking-wider text-cozy-muted dark:text-night-muted font-medium font-mono">Academic Track</span>
-          <h2 class="font-serif text-2xl font-normal tracking-tight">Education</h2>
-        </div>
-
-        <div class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border space-y-4">
-          <div class="space-y-1">
-            <div class="flex justify-between items-baseline text-xs font-mono">
-              <span class="text-cozy-terracotta font-semibold">2025 &ndash; 2029</span>
-              <span class="font-bold text-cozy-sage dark:text-night-sage">CGPA: 7.57 / 10.0</span>
-            </div>
-            <h3 class="font-serif text-base font-medium text-cozy-charcoal dark:text-night-text">
-              Bachelor of Technology (Computer Science and AI)
-            </h3>
-            <p class="text-xs text-cozy-muted dark:text-night-muted">
-              Newton School of Technology, S-VYASA University &bull; Bengaluru
-            </p>
-          </div>
-
-          <div class="pt-3 border-t border-cozy-border/60 dark:border-night-border/60 space-y-1">
-            <div class="flex justify-between items-baseline text-xs font-mono">
-              <span>2022 &ndash; 2024</span>
-              <span class="font-semibold">84.0%</span>
-            </div>
-            <h4 class="text-sm font-medium text-cozy-charcoal dark:text-night-text">Intermediate (Class XII)</h4>
-            <p class="text-xs text-cozy-muted dark:text-night-muted">Sacred Heart Convent</p>
-          </div>
-
-          <div class="pt-3 border-t border-cozy-border/60 dark:border-night-border/60 space-y-1">
-            <div class="flex justify-between items-baseline text-xs font-mono">
-              <span>2021 &ndash; 2022</span>
-              <span class="font-semibold">86.0%</span>
-            </div>
-            <h4 class="text-sm font-medium text-cozy-charcoal dark:text-night-text">Matriculation (Class X)</h4>
-            <p class="text-xs text-cozy-muted dark:text-night-muted">Tagore Academy</p>
-          </div>
-        </div>
+      <div>
+        <span class="text-xs uppercase tracking-wider text-cozy-muted dark:text-night-muted font-medium font-mono">Skills</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">Skills</h2>
       </div>
 
-      <!-- Right: Technical Skills -->
-      <div id="skills" class="lg:col-span-6 space-y-4">
-        <div>
-          <span class="text-xs uppercase tracking-wider text-cozy-muted dark:text-night-muted font-medium font-mono">Toolkit</span>
-          <h2 class="font-serif text-2xl font-normal tracking-tight">Technical Skills</h2>
-        </div>
-
-        <div class="p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border space-y-4 text-xs font-mono">
-          <div>
-            <span class="text-cozy-terracotta dark:text-night-terracotta font-sans text-sm font-semibold">Computer Languages</span>
-            <p class="text-cozy-muted dark:text-night-muted mt-1 leading-relaxed">
-              JavaScript, Python, Java
-            </p>
+      <!-- Clean 5-card grid matching the 5 exact resume bullet points -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        
+        <!-- Skill 1 -->
+        <div class="p-5 sm:p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border space-y-3 soft-card">
+          <div class="flex items-center gap-2 text-xs font-mono uppercase text-cozy-terracotta dark:text-night-terracotta font-medium">
+            <i data-lucide="code" class="w-4 h-4"></i>
+            <span>Computer Language</span>
           </div>
-
-          <div class="pt-2 border-t border-cozy-border/60 dark:border-night-border/60">
-            <span class="text-cozy-sage dark:text-night-sage font-sans text-sm font-semibold">Frameworks &amp; Libraries</span>
-            <p class="text-cozy-muted dark:text-night-muted mt-1 leading-relaxed">
-              React, Node.js, Express JS, Tailwind CSS, FastAPI
-            </p>
-          </div>
-
-          <div class="pt-2 border-t border-cozy-border/60 dark:border-night-border/60">
-            <span class="text-cozy-charcoal dark:text-night-text font-sans text-sm font-semibold">Databases &amp; Tools</span>
-            <p class="text-cozy-muted dark:text-night-muted mt-1 leading-relaxed">
-              PostgreSQL, MongoDB, Git and GitHub, Docker
-            </p>
-          </div>
-
-          <div class="pt-2 border-t border-cozy-border/60 dark:border-night-border/60">
-            <span class="text-cozy-muted font-sans text-sm font-semibold">Coursework</span>
-            <p class="text-cozy-muted dark:text-night-muted mt-1">
-              Data Structures and Algorithms
-            </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-cozy-sand/50 dark:bg-night-border font-mono text-xs font-medium">JavaScript</span>
+            <span class="px-3 py-1.5 rounded-lg bg-cozy-sand/50 dark:bg-night-border font-mono text-xs font-medium">Python</span>
+            <span class="px-3 py-1.5 rounded-lg bg-cozy-sand/50 dark:bg-night-border font-mono text-xs font-medium">Java</span>
           </div>
         </div>
+
+        <!-- Skill 2 -->
+        <div class="p-5 sm:p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border space-y-3 soft-card">
+          <div class="flex items-center gap-2 text-xs font-mono uppercase text-cozy-sage dark:text-night-sage font-medium">
+            <i data-lucide="layers" class="w-4 h-4"></i>
+            <span>Frameworks &amp; Libraries</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-cozy-sand/50 dark:bg-night-border font-mono text-xs font-medium">React</span>
+            <span class="px-3 py-1.5 rounded-lg bg-cozy-sand/50 dark:bg-night-border font-mono text-xs font-medium">Node.js</span>
+            <span class="px-3 py-1.5 rounded-lg bg-cozy-sand/50 dark:bg-night-border font-mono text-xs font-medium">Express JS</span>
+            <span class="px-3 py-1.5 rounded-lg bg-cozy-sand/50 dark:bg-night-border font-mono text-xs font-medium">Tailwind CSS</span>
+            <span class="px-3 py-1.5 rounded-lg bg-cozy-sand/50 dark:bg-night-border font-mono text-xs font-medium">FastAPI</span>
+          </div>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="p-5 sm:p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border space-y-3 soft-card">
+          <div class="flex items-center gap-2 text-xs font-mono uppercase text-cozy-charcoal dark:text-night-text font-medium">
+            <i data-lucide="database" class="w-4 h-4"></i>
+            <span>Databases &amp; Data Tools</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-cozy-sand/50 dark:bg-night-border font-mono text-xs font-medium">PostgreSQL</span>
+            <span class="px-3 py-1.5 rounded-lg bg-cozy-sand/50 dark:bg-night-border font-mono text-xs font-medium">MongoDB</span>
+          </div>
+        </div>
+
+        <!-- Skill 4 -->
+        <div class="p-5 sm:p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border space-y-3 soft-card">
+          <div class="flex items-center gap-2 text-xs font-mono uppercase text-cozy-muted font-medium">
+            <i data-lucide="book-open" class="w-4 h-4"></i>
+            <span>Courses</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-cozy-sand/50 dark:bg-night-border font-mono text-xs font-medium">Data Structures and Algorithms</span>
+          </div>
+        </div>
+
+        <!-- Skill 5 -->
+        <div class="p-5 sm:p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border space-y-3 soft-card sm:col-span-2 lg:col-span-2">
+          <div class="flex items-center gap-2 text-xs font-mono uppercase text-cozy-terracotta dark:text-night-terracotta font-medium">
+            <i data-lucide="git-branch" class="w-4 h-4"></i>
+            <span>Version Control / Developer Tools</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-lg bg-cozy-sand/50 dark:bg-night-border font-mono text-xs font-medium">Git and Github</span>
+            <span class="px-3 py-1.5 rounded-lg bg-cozy-sand/50 dark:bg-night-border font-mono text-xs font-medium">Docker</span>
+          </div>
+        </div>
+
       </div>
 
     </section>
 
 
     <!-- ====================================================== -->
-    <!-- 6. CONTACT (WIDE FULL-SPACE LAYOUT)                    -->
+    <!-- 6. EDUCATION                                           -->
+    <!-- ====================================================== -->
+    <section id="education" class="w-full space-y-4 pt-6 border-t border-cozy-border/70 dark:border-night-border/70">
+      
+      <div>
+        <span class="text-xs uppercase tracking-wider text-cozy-muted dark:text-night-muted font-medium font-mono">Academic Track</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-normal tracking-tight">Education</h2>
+      </div>
+
+      <div class="p-6 sm:p-8 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border space-y-4">
+        
+        <div class="space-y-1">
+          <div class="flex justify-between items-baseline text-xs font-mono">
+            <span class="text-cozy-terracotta font-semibold">2025 &ndash; 2029</span>
+            <span class="font-bold text-cozy-sage dark:text-night-sage">CGPA: 7.57 / 10.0</span>
+          </div>
+          <h3 class="font-serif text-lg font-medium text-cozy-charcoal dark:text-night-text">
+            Bachelor of Technology (Computer Science and AI)
+          </h3>
+          <p class="text-xs text-cozy-muted dark:text-night-muted">
+            Newton School of Technology, S-VYASA University &bull; Bengaluru
+          </p>
+        </div>
+
+        <div class="pt-3 border-t border-cozy-border/60 dark:border-night-border/60 space-y-1">
+          <div class="flex justify-between items-baseline text-xs font-mono">
+            <span>2022 &ndash; 2024</span>
+            <span class="font-semibold">84.0%</span>
+          </div>
+          <h4 class="text-sm font-medium text-cozy-charcoal dark:text-night-text">Intermediate (Class XII)</h4>
+          <p class="text-xs text-cozy-muted dark:text-night-muted">Sacred Heart Convent</p>
+        </div>
+
+        <div class="pt-3 border-t border-cozy-border/60 dark:border-night-border/60 space-y-1">
+          <div class="flex justify-between items-baseline text-xs font-mono">
+            <span>2021 &ndash; 2022</span>
+            <span class="font-semibold">86.0%</span>
+          </div>
+          <h4 class="text-sm font-medium text-cozy-charcoal dark:text-night-text">Matriculation (Class X)</h4>
+          <p class="text-xs text-cozy-muted dark:text-night-muted">Tagore Academy</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ====================================================== -->
+    <!-- 7. CONTACT                                             -->
     <!-- ====================================================== -->
     <section id="contact" class="w-full space-y-6 pt-6 border-t border-cozy-border/70 dark:border-night-border/70">
       
@@ -538,7 +580,7 @@
           </div>
 
           <div>
-            <span class="text-xs font-mono text-cozy-muted">Links</span>
+            <span class="text-xs font-mono text-cozy-muted">Profiles</span>
             <div class="flex items-center gap-3 font-medium text-xs mt-1">
               <a href="https://github.com/Sadiqua-Parween" target="_blank" class="text-cozy-terracotta hover:underline">GitHub</a>
               <span>&bull;</span>
@@ -713,11 +755,11 @@ PROJECTS:
    - Integrated the Web Speech API and dynamic avatar animations to convert spoken/text inputs into continuous visual sign sequences in real time.
 
 SKILLS:
-- Computer Languages: JavaScript, Python, Java
-- Frameworks & Libraries: React, Node.js, Express JS, Tailwind CSS, FastAPI
-- Databases & Data Tools: PostgreSQL, MongoDB
-- Courses: Data Structures and Algorithms
-- Version Control / Developer Tools: Git and Github, Docker
+• Computer Language: JavaScript, Python, Java
+• Frameworks & Libraries: React, Node.js, Express JS, Tailwind CSS, FastAPI
+• Databases & Data Tools: PostgreSQL, MongoDB
+• Courses: Data Structures and Algorithms
+• Version Control / Developer Tools: Git and Github, Docker
 ========================================================`;
       const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
       const url = URL.createObjectURL(blob);
