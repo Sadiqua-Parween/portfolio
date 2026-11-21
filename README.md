@@ -1,62 +1,64 @@
 # Sadiqua Parween &bull; Portfolio
 
-> **Systems & Concurrency Software Engineer | seL4 & GNOME Upstream Contributor**
-> B.Tech in Computer Science & Artificial Intelligence at Newton School of Technology, S-VYASA University &bull; Bengaluru, India.
+> **Software Engineering Student at Newton School of Technology (S-VYASA) &bull; Open Source Contributor (GNOME Foundation)**
 
-A minimalist, warm, and cozy personal portfolio website presenting 100% verified and accurate technical background, upstream open-source contributions, featured engineering projects, and research placement objectives. All frontend, styling, and in-browser message handling are self-contained in `index.html`.
-
----
-
-## 🏛️ Upstream Open Source Engineering Experience
-
-- **seL4 Foundation / Trustworthy Systems (UNSW)** &bull; *Nov 2026*
-  - Engineered official multithreading synchronization architecture for the **seL4 Microkit** framework, reviewed and merged directly into `seL4:main` (**PR #624**, addressing issue #602).
-  - Designed cross-Protection Domain (PD) mutual exclusion utilizing standard C11 atomics (`<stdatomic.h>`) with an `atomic_flag` spinlock over a 4KB shared memory region between concurrent processes.
-  - Formulated multi-architecture build support and automated verification logic ensuring thread-safe counter increments and race-condition prevention under simulated seL4 execution.
-
-- **GNOME Foundation** &bull; *Sep 2026 – Present*
-  - Fixed asynchronous D-Bus IPC race conditions in GNOME Settings by synchronizing AccountsService D-Bus calls in C and GObject (**!3516 merged upstream**).
-  - Eliminated multi-second compositor UI freezes during application icon drag-and-drop in GNOME Shell, restoring 60 FPS responsiveness by redesigning asynchronous state synchronization.
-  - Modernized display-scale widget constraints using GTK4 and Libadwaita in GNOME Settings (**!3514 merged upstream**), resolving slider responsiveness flaws across variable DPI displays.
-  - Resolved state desynchronization in GNOME Shell volume controls, closing 4 upstream bug reports through refactored slider snapping logic in JavaScript/GJS.
+A minimalist, warm, and cozy personal portfolio website accurately reflecting Sadiqua Parween's resume, academic standing, open-source engineering contributions, featured full-stack projects, and technical skills. Built with a self-contained single-page architecture where frontend UI, styling, and in-browser message handling live directly in `index.html`.
 
 ---
 
-## 🚀 Featured Engineering & Applied AI Projects
+## 🏛️ Open Source Experience
 
-1. **Setu — Bidirectional Real-Time Sign Language & Speech Platform** (*Sep 2026*)
-   - *Python, OpenCV, MediaPipe, PyTorch, FastAPI, Web Speech API | Open Source*
-   - Real-time assistive translation pipeline translating sign language to speech and vice-versa; achieved 94% recognition accuracy across 30+ dynamic sign gestures using MediaPipe landmarking.
-   - Optimized computer vision inference loops using OpenCV multithreading, sustaining smooth 30+ FPS processing on low-power client hardware with <80ms end-to-end latency.
+- **GNOME Foundation** &bull; *September 2026 – Present &bull; Remote*
+  - **Open Source Software Engineer**
+  - Merged responsive slider UI alignment into upstream **GNOME Settings (GNOME 52)** using **GTK4** and **Libadwaita**, approved by core maintainers to ship to millions of Linux users.
+  - Resolved an asynchronous state desynchronization bug in **GNOME Shell (JavaScript/GJS)**, closing 4 open upstream issues affecting system-wide volume controls.
+  - Eliminated a multi-second UI freeze in **GNOME Shell** by refactoring asynchronous drag-and-drop state sync during app icon reordering.
+  - Rectified session state tracking logic in **C and GObject** for GNOME Control Center, preventing improper dismissal of system logout prompts on locale change.
 
-2. **Rentu — High-Concurrency Peer-to-Peer Resource Platform** (*Oct 2026*)
-   - *React.js, Node.js, Express.js, MongoDB, Docker | Full-Stack Application*
-   - Eliminated concurrent booking race conditions by developing a transactional date-interval collision algorithm preventing double-booking across simultaneous checkout requests.
-   - Engineered compound indexing on multi-attribute queries, reducing MongoDB query latency from 380ms to <75ms under simulated concurrent load.
+---
+
+## 🚀 Projects
+
+1. **Rentu** &bull; *October 2026*
+   - **Tech Stack:** React.js, Node.js, Express.js, MongoDB, JWT, Cloudinary, Vercel/Render
+   - Developed and deployed a peer-to-peer asset sharing platform to solve campus resource underutilization, enabling students to list, discover, and rent high-value items (calculators, cameras, books) instead of purchasing them.
+   - Solved the concurrent booking race condition by designing a transactional date-interval collision algorithm that prevents double-booking across simultaneous checkout requests.
+   - Optimized multi-attribute search (price, location, category) by implementing compound indexing in MongoDB, reducing query latency from 380ms to under 75ms under simulated concurrent load.
+   - Engineered the full-stack architecture end-to-end, integrated Cloudinary for optimized media pipelines, and deployed the live application.
+
+2. **Setu – Bidirectional Sign Language & Speech Communication System** &bull; *September 2026*
+   - **Tech Stack:** Python, OpenCV, MediaPipe, TensorFlow / PyTorch, React.js, FastAPI, Web Speech API
+   - Engineered a real-time assistive communication platform bridging the gap for deaf and mute individuals via bidirectional Sign-to-Speech and Text-to-Sign conversion.
+   - Trained a gesture classification pipeline using MediaPipe hand landmarks and deep learning, achieving 94% recognition accuracy across 30+ static and dynamic sign gestures.
+   - Optimized computer vision inference loops using OpenCV multi-threading, sustaining smooth 30+ FPS processing on low-power client hardware with sub-80ms translation latency.
+   - Integrated the Web Speech API and dynamic avatar animations to convert spoken/text inputs into continuous visual sign sequences in real time.
+
+---
+
+## 🎓 Education
+
+| Year | Degree / Exam | Institute | CGPA / Marks |
+|---|---|---|---|
+| 2025 – 2029 | Bachelor of Technology (Computer Science and AI) | Newton School of Technology, S-VYASA University | 7.57 / 10.0 |
+| 2022 – 2024 | Intermediate (Class XII) | Sacred Heart Convent | 84.0% |
+| 2021 – 2022 | Matriculation (Class X) | Tagore Academy | 86.0% |
 
 ---
 
 ## 🛠️ Technical Skills
 
-- **Systems & Low-Level**: C (C11/C99), C11 Atomics (`stdatomic.h`), Spinlocks, GObject, POSIX, D-Bus IPC, Memory Concurrency, Multithreading
-- **OS & Microkernels**: seL4 Microkit, Protection Domains, Shared Memory Regions, Linux Internals (Compositor, GTK4, Libadwaita), QEMU
-- **Languages & Tools**: Python, JavaScript (GJS / Node.js), C++, SQL, Git & GitHub Actions, Docker, Linux/Unix Shell
-- **Applied AI & Backends**: OpenCV (Multithreaded Loops), MediaPipe, PyTorch / TensorFlow, FastAPI, MongoDB, PostgreSQL
-
----
-
-## 🎓 Education & Work Rights
-
-- **Degree**: Bachelor of Technology in Computer Science & Artificial Intelligence (Expected May 2029, CGPA: 7.57 / 10.0)
-- **Institution**: Newton School of Technology, S-VYASA University &mdash; Bengaluru, India
-- **Placement & Work Rights**: Seeking an accredited 6-Month Full-Time Research Placement (August 2026 – January 2027) for academic credit. Eligible for the Subclass 408 (Research Stream) Visa, fully supported by Home University No Objection Certificate (NOC) and institutional credit endorsement.
+- **Computer Languages:** JavaScript, Python, Java
+- **Frameworks & Libraries:** React, Node.js, Express JS, Tailwind CSS, FastAPI
+- **Databases & Data Tools:** PostgreSQL, MongoDB
+- **Courses:** Data Structures and Algorithms
+- **Version Control / Developer Tools:** Git and Github, Docker
 
 ---
 
 ## 📬 Contact Links
 
-- **Email**: [falaksadiqua786@gmail.com](mailto:falaksadiqua786@gmail.com)
-- **Phone**: +91 9508021556
-- **GitHub**: [github.com/Sadiqua-Parween](https://github.com/Sadiqua-Parween)
-- **GitLab**: [gitlab.gnome.org/Sadiqua](https://gitlab.gnome.org/Sadiqua)
-- **LinkedIn**: [linkedin.com/in/sadiquaparween](https://www.linkedin.com/in/sadiquaparween/)
+- **Email:** [falaksadiqua786@gmail.com](mailto:falaksadiqua786@gmail.com)
+- **Phone:** +91 9508021556
+- **GitHub:** [github.com/Sadiqua-Parween](https://github.com/Sadiqua-Parween)
+- **GitLab:** [gitlab.gnome.org/Sadiqua](https://gitlab.gnome.org/Sadiqua)
+- **LinkedIn:** [linkedin.com/in/sadiquaparween](https://www.linkedin.com/in/sadiquaparween/)
