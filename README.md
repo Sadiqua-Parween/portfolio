@@ -1,27 +1,40 @@
-# Sadiqua Parween - Portfolio
+# ⚔️ Swordigo: Chronicles of Sadiqua | The Full-Stack Quest
 
-> A modern, responsive personal portfolio with a monolithic architecture: frontend UI, micro-backend engine, in-browser REST API dispatcher, and LocalStorage database are completely self-contained in a single page.
+> A Swordigo-inspired action-adventure RPG portfolio of **Sadiqua Parween** (Full-Stack Software Engineer & Code Sorceress).
+> Everything—including the playable 2D adventure canvas game, Web Audio synthesizer, frontend RPG codex, and in-browser micro-backend with LocalStorage database—is 100% self-contained in a single page (`index.html`).
 
-## 🚀 Features
+## 🎮 Game Features (Swordigo Style)
 
-- **Self-Contained Architecture**: Frontend and mock micro-backend in a single file (`index.html`).
-- **Interactive Terminal (CLI)**: Type commands directly (`help`, `skills`, `projects`, `status`, `api /api/stats`, `hire`).
-- **In-Browser Backend & DevTools**:
-  - Simulated REST API routes (`GET /api/stats`, `GET /api/skills`, `GET /api/projects`, `GET /api/guestbook`, `POST /api/contact`, etc.)
-  - Real-time traffic logger with simulated latency and status codes
-  - LocalStorage database inspector and JSON export
-- **Interactive Guestbook**: Visitors can post notes that persist in the browser's database.
-- **Contact Pipeline**: Form validation, simulated dispatch, and inbox management.
-- **Modern UI**: Tailwind CSS, Lucide icons, glassmorphism design, celebratory confetti, and Dark/Light theme toggle.
+- **Playable 2D Platformer Realm**:
+  - Run, jump, and climb across floating dungeon platforms.
+  - Slay corrupted bugs (`404_Bug`, `Memory_Leak`, `Null_Pointer`, `Race_Condition`) using the glowing **Mage Blade** (`[J]`) or casting **Magic Bolts** (`[K]`).
+  - Smash treasure chests to reveal project relics and collect **Code Shards** (💎).
+  - Web Audio API synthesizer for retro-fantasy sound effects (sword slash, magic chime, bug hit, chest fanfare) with zero external audio assets!
+  - Mobile touch controller (virtual D-pad + Jump + Attack + Magic).
+- **RPG HUD (Heads-Up Display)**:
+  - Level 24 Code Sorceress profile.
+  - Health Hearts (`❤️❤️❤️❤️❤️`) and live regenerative Mana Bar (`MP`).
+  - Live Shard & XP counters updated dynamically during gameplay.
+- **The Spellbook (Skills)**:
+  - Interactive skill tree categorized by Frontend Runes, Backend Alchemy, Database Vaults, and DevOps Wards.
+- **Quest Log (Projects)**:
+  - Real-world production projects presented as epic conquered quests with rewards, tech stacks, and source links.
+- **Adventurer's Tavern Ledger (Guestbook)**:
+  - Visitors can permanently inscribe their name and message onto an ancient stone tablet saved into the local backend DB.
+- **Raven Summoning Circle (Contact)**:
+  - RPG-themed dispatch form routing inquiries to the internal backend inbox.
+- **Game Master Console (DevTools)**:
+  - In-browser REST API route inspector (`/api/quests`, `/api/skills`, `/api/tavern`, `/api/messages`).
+  - LocalStorage database viewer and God Mode cheats (infinite shards, heal hearts, spawn chests).
 
-## 💻 Quick Start
+## 🚀 How to Play & View
 
-Simply open `index.html` in any modern web browser:
+Open `index.html` in any web browser:
 
 ```bash
-# On macOS
+# macOS
 open index.html
 
-# Or serve locally with Python
+# Or serve locally
 python3 -m http.server 8000
 ```
