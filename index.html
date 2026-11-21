@@ -122,7 +122,7 @@
           <span>Resume</span>
         </button>
 
-        <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2 rounded-full hover:bg-cozy-sand/60 dark:hover:bg-night-card border border-transparent hover:border-cozy-border dark:hover:border-night-border text-cozy-muted dark:text-night-muted transition-colors" title="Toggle Day/Night Mode">
+        <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2 rounded-full hover:bg-cozy-sand/60 dark:hover:bg-night-card border border-transparent hover:border-cozy-border dark:border-night-border text-cozy-muted dark:text-night-muted transition-colors" title="Toggle Day/Night Mode">
           <i data-lucide="moon" id="moonIcon" class="w-4 h-4"></i>
           <i data-lucide="sun" id="sunIcon" class="w-4 h-4 hidden"></i>
         </button>
@@ -143,7 +143,7 @@
     <section class="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-2">
       
       <!-- Left: Introduction -->
-      <div class="lg:col-span-8 space-y-4">
+      <div class="lg:col-span-8 space-y-5">
         
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cozy-sageLight dark:bg-night-sageBg text-cozy-sage dark:text-night-sage text-xs font-medium">
           <span class="w-1.5 h-1.5 rounded-full bg-cozy-sage dark:bg-night-sage"></span>
@@ -158,24 +158,45 @@
           I am a Software Engineering student at <strong>Newton School of Technology (S-VYASA University)</strong>. I enjoy building responsive web applications, creating fast REST APIs, and contributing to open-source software.
         </p>
 
-        <!-- Direct Social Links -->
-        <div class="flex flex-wrap items-center gap-3 pt-1 text-xs font-mono">
-          <a href="https://github.com/Sadiqua-Parween" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border hover:border-cozy-terracotta dark:hover:border-night-terracotta flex items-center gap-2 transition-colors">
-            <i data-lucide="github" class="w-4 h-4 text-cozy-charcoal dark:text-night-text"></i>
-            <span>GitHub</span>
+        <!-- Clean Social / Platform Icon Buttons (Icons only, connecting directly) -->
+        <div class="flex items-center gap-3.5 pt-1">
+          
+          <!-- GitHub Icon -->
+          <a href="https://github.com/Sadiqua-Parween" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-full bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border flex items-center justify-center text-cozy-charcoal dark:text-night-text hover:text-cozy-terracotta dark:hover:text-night-terracotta hover:border-cozy-terracotta dark:hover:border-night-terracotta hover:scale-110 transition-all shadow-sm" title="GitHub">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
           </a>
-          <a href="https://gitlab.gnome.org/Sadiqua" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border hover:border-cozy-sage dark:hover:border-night-sage flex items-center gap-2 transition-colors">
-            <i data-lucide="git-merge" class="w-4 h-4 text-cozy-sage dark:text-night-sage"></i>
-            <span>GNOME GitLab</span>
+
+          <!-- GitLab Icon -->
+          <a href="https://gitlab.gnome.org/Sadiqua" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-full bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border flex items-center justify-center text-[#e24329] hover:border-[#e24329] hover:scale-110 transition-all shadow-sm" title="GNOME GitLab">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M22.65 14.39L20.6 8.08c-.1-.32-.38-.54-.72-.54-.34 0-.62.22-.72.54l-1.95 6.01H6.79l-1.95-6.01c-.1-.32-.38-.54-.72-.54-.34 0-.62.22-.72.54L1.35 14.39c-.11.33-.01.7.25.92L12 23.36l10.4-8.05c.26-.22.36-.59.25-.92z"/>
+            </svg>
           </a>
-          <a href="https://www.linkedin.com/in/sadiquaparween/" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border hover:border-cozy-terracotta dark:hover:border-night-terracotta flex items-center gap-2 transition-colors">
-            <i data-lucide="linkedin" class="w-4 h-4 text-[#0a66c2]"></i>
-            <span>LinkedIn</span>
+
+          <!-- LinkedIn Icon -->
+          <a href="https://www.linkedin.com/in/sadiquaparween/" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-full bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border flex items-center justify-center text-[#0a66c2] hover:border-[#0a66c2] hover:scale-110 transition-all shadow-sm" title="LinkedIn">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
           </a>
-          <a href="mailto:falaksadiqua786@gmail.com" class="px-3.5 py-2 rounded-xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border hover:border-cozy-charcoal dark:hover:border-night-text flex items-center gap-2 transition-colors">
-            <i data-lucide="mail" class="w-4 h-4 text-cozy-terracotta"></i>
-            <span>falaksadiqua786@gmail.com</span>
+
+          <!-- Email Icon -->
+          <a href="mailto:falaksadiqua786@gmail.com" class="w-11 h-11 rounded-full bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border flex items-center justify-center text-cozy-terracotta hover:border-cozy-terracotta hover:scale-110 transition-all shadow-sm" title="Email">
+            <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+              <rect width="20" height="16" x="2" y="4" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
           </a>
+
+          <!-- Phone Icon -->
+          <a href="tel:+919508021556" class="w-11 h-11 rounded-full bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border flex items-center justify-center text-cozy-sage hover:border-cozy-sage hover:scale-110 transition-all shadow-sm" title="Phone">
+            <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </a>
+
         </div>
 
       </div>
@@ -271,7 +292,6 @@
           </a>
         </div>
 
-        <!-- Clean simple bullet points -->
         <ul class="text-sm text-cozy-muted dark:text-night-muted space-y-2 leading-relaxed">
           <li class="flex items-start gap-2">
             <span class="text-cozy-sage font-bold">&bull;</span>
@@ -559,36 +579,57 @@
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
-        <!-- Quick Info Box -->
-        <div class="lg:col-span-5 p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border space-y-4 text-sm">
-          <div>
-            <span class="text-xs font-mono text-cozy-muted">Email</span>
-            <p class="mt-0.5">
-              <a href="mailto:falaksadiqua786@gmail.com" class="font-medium text-cozy-charcoal dark:text-night-text hover:text-cozy-terracotta">
-                falaksadiqua786@gmail.com
+        <!-- Quick Info Box with Clean Clickable Icons -->
+        <div class="lg:col-span-5 p-6 rounded-2xl bg-cozy-card dark:bg-night-card border border-cozy-border dark:border-night-border space-y-5 text-sm">
+          
+          <div class="space-y-1.5">
+            <span class="text-xs font-mono text-cozy-muted uppercase">Connect on Platforms</span>
+            <div class="flex items-center gap-3 pt-1">
+              
+              <!-- GitHub -->
+              <a href="https://github.com/Sadiqua-Parween" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-cozy-cream dark:bg-night-border flex items-center justify-center text-cozy-charcoal dark:text-night-text hover:text-cozy-terracotta hover:scale-110 transition-all" title="GitHub">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+                </svg>
               </a>
-            </p>
-          </div>
 
-          <div>
-            <span class="text-xs font-mono text-cozy-muted">Phone</span>
-            <p class="mt-0.5">
-              <a href="tel:+919508021556" class="font-medium text-cozy-charcoal dark:text-night-text hover:underline">
-                +91 9508021556
+              <!-- GitLab -->
+              <a href="https://gitlab.gnome.org/Sadiqua" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-cozy-cream dark:bg-night-border flex items-center justify-center text-[#e24329] hover:scale-110 transition-all" title="GNOME GitLab">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M22.65 14.39L20.6 8.08c-.1-.32-.38-.54-.72-.54-.34 0-.62.22-.72.54l-1.95 6.01H6.79l-1.95-6.01c-.1-.32-.38-.54-.72-.54-.34 0-.62.22-.72.54L1.35 14.39c-.11.33-.01.7.25.92L12 23.36l10.4-8.05c.26-.22.36-.59.25-.92z"/>
+                </svg>
               </a>
-            </p>
-          </div>
 
-          <div>
-            <span class="text-xs font-mono text-cozy-muted">Profiles</span>
-            <div class="flex items-center gap-3 font-medium text-xs mt-1">
-              <a href="https://github.com/Sadiqua-Parween" target="_blank" class="text-cozy-terracotta hover:underline">GitHub</a>
-              <span>&bull;</span>
-              <a href="https://gitlab.gnome.org/Sadiqua" target="_blank" class="text-cozy-sage hover:underline">GNOME GitLab</a>
-              <span>&bull;</span>
-              <a href="https://www.linkedin.com/in/sadiquaparween/" target="_blank" class="text-cozy-charcoal dark:text-night-text hover:underline">LinkedIn</a>
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/sadiquaparween/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-cozy-cream dark:bg-night-border flex items-center justify-center text-[#0a66c2] hover:scale-110 transition-all" title="LinkedIn">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                </svg>
+              </a>
+
+              <!-- Email -->
+              <a href="mailto:falaksadiqua786@gmail.com" class="w-10 h-10 rounded-full bg-cozy-cream dark:bg-night-border flex items-center justify-center text-cozy-terracotta hover:scale-110 transition-all" title="Email">
+                <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                  <rect width="20" height="16" x="2" y="4" rx="2"/>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                </svg>
+              </a>
+
+              <!-- Phone -->
+              <a href="tel:+919508021556" class="w-10 h-10 rounded-full bg-cozy-cream dark:bg-night-border flex items-center justify-center text-cozy-sage hover:scale-110 transition-all" title="Phone">
+                <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </a>
+
             </div>
           </div>
+
+          <div class="pt-3 border-t border-cozy-border/60 dark:border-night-border/60 space-y-1 text-xs">
+            <div class="text-cozy-muted">Email: <span class="text-cozy-charcoal dark:text-night-text font-medium">falaksadiqua786@gmail.com</span></div>
+            <div class="text-cozy-muted">Phone: <span class="text-cozy-charcoal dark:text-night-text font-medium">+91 9508021556</span></div>
+          </div>
+
         </div>
 
         <!-- Contact Form -->
